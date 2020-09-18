@@ -54,7 +54,9 @@ $(document).ready(function(){
             ["gray1","#F5F7FA","#E6E9ED","#c2c5c9"],
             ["gray2","#CCD1D9","#AAB2BD","#88919d"],
             ["dark1","#656D78","#434A54","#242b34"],
-            ["dark2","#3C3B3D","#323133","#1c191f"]
+            ["dark2","#3C3B3D","#323133","#1c191f"],
+            ["irllab","#8B4DB8","#8B4DB8","#8B4DB8"], 
+            ["irllab2","#6289A5","#6289A5","#95EFFF"]
         ];
         var socialColorArray = [
             ["facebook","#3b5998"], 
