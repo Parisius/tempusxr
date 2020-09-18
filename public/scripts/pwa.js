@@ -42,7 +42,7 @@ $(document).ready(function(){
     
     //Firing PWA prompts for specific versions and when not on home screen.    
     if (isMobile.Android()) {
-        console.log('Android Detected');
+     /* */   console.log('Android Detected');
         function showInstallPromotion(){
             if($('#menu-install-pwa-android, .add-to-home').length){
                 console.log('Triggering PWA Menu for Android');

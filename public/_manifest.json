@@ -4,7 +4,7 @@
 "lang" : "en",
 "name" : "TempusXR",
 "display" : "fullscreen",
-"start_url" : "https://tempusxr.herokuapp.com/index.html",
+"start_url" : "index.html",
 "short_name" : "TempusXR",
 "description" : "",
 "orientation" : "portrait",
