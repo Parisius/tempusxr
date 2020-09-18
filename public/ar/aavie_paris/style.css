@@ -1,0 +1,47 @@
+#nextbutton {
+    width: 13vw;
+    position: absolute;
+    bottom: 6vh;
+    left: 5vw;
+    background-color: #53BFFF;
+    border: 0.2em solid white;
+    text-align: center;
+    color: #FFF;
+    border-radius: 100px;
+  }
+  
+  #nextbutton:active {
+    background-color: white;
+    color: #53BFFF;
+  }
+  #nextbutton2 {
+    width: 40vw;
+    height: 5%;
+    position: absolute;
+    bottom: 6vh;
+    left: 29vw;
+    background-color: #6E2EDD;
+    border: 0.2em solid white;
+    text-align: center;
+    color: #FFF;
+    border-radius: 30px;
+  }
+  
+  #nextbutton2:active {
+    background-color: white;
+    color: #6E2EDD;
+  }
+
+  div.button {
+    z-index: 10;
+    width: 13%;
+    height: 10%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #6E2EDD;
+    text-align: center;
+    color: #FFFFFF;
+    vertical-align: middle;
+    user-select: none;
+  }

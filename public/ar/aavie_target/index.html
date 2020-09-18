@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <title>Tempus XR - AAVIE Xperience</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="//cdn.8thwall.com/web/aframe/8frame-0.9.0.min.js"></script>
+
+  <!-- XR Extras - provides utilities like load screen, almost there, and error handling.
+         See github.com/8thwall/web/xrextras -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
+
+  <!-- 8thWall Web - Replace the app key here with your own app key -->
+  <script src="//apps.8thwall.com/xrweb?appKey=8rBFKWZxQz4JJMoe3PEaP3XTOWgZFqa7WHGLT50pPyjbBi7XRNHiP3LnSzK4Y1emSlBQYR"></script>
+
+  <script>
+    AFRAME.registerComponent('next-button', {
+      init: function() {
+
+        //const animationList = ["Man_suit|Man_suit|mantalking|Man_suit|mantalking"]
+
+        //const model = document.getElementById('model')
+        const nextButton = document.getElementById('nextbutton')
+        nextButton.style.display = 'block'
+        //let idx = 1 // Start with the 2nd animation because the model starts with idle animation
+         const nextAnimation = () => {
+          nextButton.addEventListener('click', event => {
+          if (navigator.share) {
+            navigator.share({
+              title: 'Merci de partager TempusXR',
+              text: 'D\u00E9couvre l\'application TempusXR et ses exp\u00E9riences int\u00E9ressantes ici:',
+              url: 'https://bit.ly/tempusxr'
+            }).then(() => {
+              console.log('Thanks for sharing!');
+            })
+            .catch(console.error);
+          } else {
+            shareDialog.classList.add('is-open');
+          }
+        });
+        } 
+        
+        nextButton.onclick = nextAnimation; // Switch to the next animation when the button is pressed.
+      }
+    }
+    );
+    AFRAME.registerComponent('next-button2', {
+      init: function() {
+
+        //const animationList = ["Man_suit|Man_suit|mantalking|Man_suit|mantalking"]
+
+        //const model = document.getElementById('model')
+        const nextButton2 = document.getElementById('nextbutton2')
+        nextButton2.style.display = 'block'
+        //let idx = 1 // Start with the 2nd animation because the model starts with idle animation
+         const nextAnimation2 = () => {
+          window.open("../../surveys.html?idexp=1","_self");
+        } 
+        
+        nextButton2.onclick = nextAnimation2; // Switch to the next animation when the button is pressed.
+      }
+    }
+    )
+  </script>
+</head>
+
+<body>
+  <div class="button" id="nextbutton" style="display: none; z-index: 10">
+    <h2><i class="fa fa-share-alt"></i></h2>
+  </div>
+  <button id="nextbutton2" style="display: none; z-index: 40"type="button">Quittez</button>
+  <a-scene
+    next-button
+    next-button2
+    xrweb="disableWorldTracking: true"
+    xrextras-gesture-detector
+    xrextras-almost-there
+    xrextras-loading
+    xrextras-runtime-error>
+
+    <a-assets>
+      <!-- Credit to Poly by Google for the model: https://poly.google.com/view/dA5osnS0Rzj -->
+      
+      <!-- <img id="jelly-thumb" src="targets/parisius_target.png">
+      <video
+        id="jelly-video"
+        crossorigin="anonymous"
+        loop="true"
+        src="parisius.mp4">
+      </video> -->
+
+      <img id="jelly-thumb2" src="targets/personnel.png">
+      <video
+        id="jelly-video2"
+        crossorigin="anonymous"
+        loop="true"
+        src="personnel.mp4">
+      </video>
+    </a-assets>
+
+    <a-camera
+      position="0 4 10"
+      raycaster="objects: .cantap"
+      cursor="fuse: false; rayOrigin: mouse;">
+    </a-camera>
+
+    <a-light type="directional" intensity="0.5" position="1 1 1"></a-light>
+
+    <a-light type="ambient" intensity="1"></a-light>
+
+    <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
+    <!-- <a-entity
+      xrextras-named-image-target="name: parisius_target"
+      xrextras-play-video="video: #jelly-video; thumb: #jelly-thumb; canstop: true"
+      geometry="primitive: plane; height: 1; width: 0.79;">
+    </a-entity> -->
+    <a-entity
+      xrextras-named-image-target="name: personnel"
+      xrextras-play-video="video: #jelly-video2; thumb: #jelly-thumb2; canstop: true"
+      geometry="primitive: plane; height: 1; width: 0.79;">
+    </a-entity>
+
+  </a-scene>
+
+</body>
+</html>
