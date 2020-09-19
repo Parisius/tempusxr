@@ -1,3 +1,11 @@
+
+
+/*Stories*/
+.storiesWrapper {
+  padding: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+}
 /*Typography Settings*/
 body {
   font-size: 13px;

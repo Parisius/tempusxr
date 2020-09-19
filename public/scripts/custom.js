@@ -1,3 +1,4 @@
+
 $(window).on('load',function(){
     $('.menu').css('display','block');
     $('#preloader').addClass('preloader-hide');
@@ -15,8 +16,7 @@ $(document).ready(function(){
         //ADD YOUR CUSTOM JAVASCRIPT CODES HERE! 
         //Do not put inside HTML files.
         //The init_template() function will be triggered when pages open.
-        
-               
+          
         //Generating Dynamic Styles to decrease CSS size and execute faster loading times. 
         var colorsArray = [
             //colors must be in HEX format.
