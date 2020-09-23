@@ -1,339 +1,220 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#6E2EDD">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-    <title>StickyMobile BootStrap</title>
-    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
-    <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
-    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
-    <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
-    <link rel="stylesheet" href="styles/zuck.min.css">
-    <link rel="stylesheet" href="styles/skins/snapgram.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
-    <script src="https://unpkg.com/vuex"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#6E2EDD">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+<title>TempusXR</title>
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
+<link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+<link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+<link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
 </head>
     
-<body class="theme-light" data-background="none" data-highlight="irllab">
+<body class="theme-light" data-background="none" data-highlight="red2">
     
 <div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
-
+    
 <div id="page">
+        
+    <a href="#" data-toggle-theme class="show-on-theme-light cover-button-top btn btn-xs rounded-xl shadow-huge btn-center-s font-900 bg-blue1-dark "><i class="fa fa-moon mr-3"></i>DARK MODE</a>
+    <a href="#" data-toggle-theme class="show-on-theme-dark cover-button-top btn btn-xs rounded-xl shadow-huge btn-center-s font-900 bg-blue2-dark "><i class="fa fa-sun mr-3"></i>LIGHT MODE</a>
+        
+    <div class="page-content pb-0 bg-theme">
     
-    <div id="footer-bar" class="footer-bar-3 ">
-        <a href="index.html" class="active-nav"><i class="fa fa-home"></i><span>Home</span></a>
-        <a href="index-components.html"><i class="fa fa-star"></i><span>Features</span></a>
-        <a href="index-pages.html"><i class="fa fa-heart"></i><span>Pages</span></a>
-        <a href="index-search.html"><i class="fa fa-search"></i><span>Search</span></a>
-        <a href="#" data-menu="menu-settings"><i class="fa fa-cog"></i><span>Settings</span><em class="badge bg-green1-dark">3</em></a>
-    </div>
-
-    <div><br></div>
-      
-    <div class="content mb-2">
-        <h3>Around the world</h3>
-    </div> 
-    <div id="stories" class="storiesWrapper"></div>
-    <div class="page-content header-clear-small">
-        <!-- <video controls controlsList="nodownload" width="640" height="480" poster="images/pictures/13.jpg" muted> 
-            <source src="https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.mp4", " type="video/mp4"> 
-            <!-- fallback for browsers that don't support video tag -> 
-            <a href="videofile.mp4">download video</a> 
-        </video> -->
-
-        <!--Search -->
-        <div class="search-box search-header bg-theme card-style mr-3 ml-3">
-            <i class="fa fa-search"></i>
-            <input type="text" class="border-0" placeholder="What are you looking for? " data-search>
-            <a href="#" class="disabled"><i class="fa fa-times-circle color-red2-dark"></i></a>
-            <!-- <a href="component-colors.html"><i class="fa fa-qrcode font-30 color-magenta2-dark"></i></a> -->
-        </div>
-        <div class="content ">
-            <div class="search-results disabled-search-list">
-                <div class="list-group list-custom-large">
-                    <a href="#" data-filter-item data-filter-name="all demo smartphone apple iphone">
-                        <i class="fab fa-apple color-gray2-dark"></i>
-                        <span>Apple</span>
-                        <strong>Works on iOS 10 and Higher</strong>
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                    <a href="#" data-filter-item data-filter-name="all demo smartphone apple iphone">
-                        <i class="fab fa-android color-green1-dark"></i>
-                        <span>Android</span>
-                        <strong>Works on Android 5.1.1 and Higher</strong>
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                    <a href="#" data-filter-item data-filter-name="all demo code css3 css">
-                        <i class="fab fa-css3 color-blue2-dark font-17"></i>
-                        <span>CSS3 </span>
-                        <strong>Beautiful Design. Simple Code.</strong>
-                        <i class="fa fa-angle-right"></i>
-                    </a> 
-                    <a href="#" data-filter-item data-filter-name="all demo code html5 html">
-                        <i class="fab fa-html5 color-orange-dark"></i>
-                        <span>HTML5 </span>
-                        <strong>Powerful and Universally Compatible</strong>
-                        <i class="fa fa-angle-right"></i>
-                    </a>   
-                    <a href="#" data-filter-item data-filter-name="all demo support help">
-                        <i class="fa fa-life-ring color-red2-dark font-17"></i>
-                        <span>Support </span>
-                        <strong>Elite Quality, 24/7 Support for Buyers</strong>
-                        <i class="fa fa-angle-right"></i>
-                    </a>   
-                    <a href="#" data-filter-item data-filter-name="all demo code js jquery java javascript">
-                        <i class="fab fa-js color-yellow2-dark font-17"></i>
-                        <span>JavaScript </span>
-                        <strong>Clean Code, Easy to Use and Modify</strong>
-                        <i class="fa fa-angle-right"></i>
-                    </a>      
-                    <a href="#" data-filter-item data-filter-name="all demo support elite help documentation">
-                        <i class="fa fa-file color-gray2-dark font-17"></i>
-                        <span>Documentation </span>
-                        <strong>Every Feature and Aspect Covered.</strong>
-                        <i class="fa fa-angle-right"></i>
-                    </a>     
-                </div>
-            </div>
-        </div>
-       <!--Search -->
-
-        <!--Promotion Carousels-->
-        <div class="single-slider slider-boxed owl-carousel owl-no-dots">
-            <div class="card rounded-m shadow-l">
-                <div class="card-top">
-                    <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now</span>
-                </div>
-                <div class="card-bottom text-center mb-0">
-                    <h1 class="color-white font-700 mb-n1">Power of Augmented Reality</h1>
-                    <p class="color-white opacity-80 mb-4">To enhance your digital Communication</p>
-                </div>
-                <div class="card-overlay bg-gradient"></div>
-                <img class="img-fluid" src="images/assets/day_12.gif">
-            </div>
-            <div class="card rounded-m shadow-l">
-                <div class="card-top">
-                    <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now</span>
-                </div>
-                <div class="card-bottom text-center mb-0">
-                    <h1 class="color-white font-700 mb-n1">Discover a world</h1>
-                    <p class="color-white opacity-80 mb-4">Full of potentialities</p>
-                </div>
-                <div class="card-overlay bg-gradient"></div>
-                <img class="img-fluid" src="images/assets/fashion-ar-01.gif">
-            </div>
-            <div class="card rounded-m shadow-l">
-                <div class="card-top">
-                    <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now</span>
-                </div>
-                <div class="card-bottom text-center mb-0">
-                    <h1 class="color-white font-700 mb-n1">Learn & Play</h1>
-                    <p class="color-white opacity-80 mb-4">In a more fun ways</p>
-                </div>
-                <div class="card-overlay bg-gradient"></div>
-                <img class="img-fluid" src="images/assets/uicover.gif">
-            </div>
-            <div class="card rounded-m shadow-l">
-                <div class="card-top">
-                    <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now</span>
-                </div>
-                <div class="card-bottom text-center mb-0">
-                    <h1 class="color-white font-700 mb-n1">Product Vizualition</h1>
-                    <p class="color-white opacity-80 mb-4">Allow your Customer to try your product before buying it</p>
-                </div>
-                <div class="card-overlay bg-gradient"></div>
-                <img class="img-fluid" src="images/assets/untitled-13.gif">
-            </div>
-        </div>    
-         <!--/*Promotion Carousels*/-->
-
-        <!--Latest 10 Experiences-->
-        <div class="card card-style">
-            <div class="content">
-
-                <h3>Latest Experiences</h3>
-                <p>The 10 latest experiences additions</p>
-                            
-                <a href="page-product-2.html" class="d-flex pb-4">
-                    <div class="align-self-center">
-                        <img src="images/assets/untitled-13.gif" class="rounded-sm" width="60">
-                    </div>
-                    <div class="align-self-center pl-3">
-                        <h5 class="mb-n1">Product Vizualuzation</h5>
-                        <p class="font-600 opacity-40 mb-0">By IRLLab</p>
-                    </div>
-                    <div class="align-self-center ml-auto">
-                        <i class="fa fa-play-circle font-24 color-highlight"></i>
-                    </div>
-                </a>
-
-                <a href="#" class="d-flex pb-4">
-                    <div class="align-self-center">
-                        <img src="images/pictures/14s.jpg" class="rounded-sm" width="60">
-                    </div>
-                    <div class="align-self-center pl-3">
-                        <h5 class="mb-n1">Services Advertising</h5>
-                        <p class="font-600 opacity-40 mb-0">By Winiga</p>
-                    </div>
-                    <div class="align-self-center ml-auto">
-                        <i class="fa fa-play-circle font-24 color-highlight"></i>
-                    </div>
-                </a>
-
-                <a href="#" class="d-flex pb-4">
-                    <div class="align-self-center">
-                        <img src="images/pictures/14s.jpg" class="rounded-sm" width="60">
-                    </div>
-                    <div class="align-self-center pl-3">
-                        <h5 class="mb-n1">Discover You Virtual Lawyer Assistant in AR</h5>
-                        <p class="font-600 opacity-40 mb-0">By L</p>
-                    </div>
-                    <div class="align-self-center ml-auto">
-                        <i class="fa fa-play-circle font-24 color-highlight"></i>
-                    </div>
-                </a>
-
-                <a href="#" class="d-flex pb-4">
-                    <div class="align-self-center">
-                        <img src="images/pictures/14s.jpg" class="rounded-sm" width="60">
-                    </div>
-                    <div class="align-self-center pl-3">
-                        <h5 class="mb-n1">Try your Wax</h5>
-                        <p class="font-600 opacity-40 mb-0">By Visco</p>
-                    </div>
-                    <div class="align-self-center ml-auto">
-                        <i class="fa fa-play-circle font-24 color-highlight"></i>
-                    </div>
-                </a>
-
-                <a href="#" class="d-flex pb-4">
-                    <div class="align-self-center">
-                        <img src="images/pictures/14s.jpg" class="rounded-sm" width="60">
-                    </div>
-                    <div class="align-self-center pl-3">
-                        <h5 class="mb-n1">Product Presentation</h5>
-                        <p class="font-600 opacity-40 mb-0">By Life Insurance</p>
-                    </div>
-                    <div class="align-self-center ml-auto">
-                        <i class="fa fa-play-circle font-24 color-highlight"></i>
-                    </div>
-                </a>
-
-                <a href="#" class="d-flex pb-4">
-                    <div class="align-self-center">
-                        <img src="images/assets/human_anatomy_dribbble2_2x.webp" class="rounded-sm" width="60">
-                    </div>
-                    <div class="align-self-center pl-3">
-                        <h5 class="mb-n1">Human anatomy made easier</h5>
-                        <p class="font-600 opacity-40 mb-0">By IRLLab</p>
-                    </div>
-                    <div class="align-self-center ml-auto">
-                        <i class="fa fa-play-circle font-24 color-highlight"></i>
-                    </div>
-                </a>
-
-                <a href="#" class="d-flex pb-4">
-                    <div class="align-self-center">
-                        <img src="images/assets/cloudbric_dribbble_03.gif" class="rounded-sm" width="60">
-                    </div>
-                    <div class="align-self-center pl-3">
-                        <h5 class="mb-n1">Tower defense Game</h5>
-                        <p class="font-600 opacity-40 mb-0">By IRLLab</p>
-                    </div>
-                    <div class="align-self-center ml-auto">
-                        <i class="fa fa-play-circle font-24 color-highlight"></i>
-                    </div>
-                </a>
-                
-            </div>           
-        </div>
-        <!--/*Latest 10 Experiences*/-->
-    </div> 
     
-    <!-- End of Page Content--> 
-    <!-- All Menus, Action Sheets, Modals, Notifications, Toasts, Snackbars get Placed outside the <div class="page-content"> -->
-    <div id="menu-settings" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="308">
-        <div class="menu-title"><h1>Settings</h1><p class="color-highlight">Flexible and Easy to Use</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
-        <div class="divider divider-margins mb-n2"></div>
-        <div class="content">
-            <div class="list-group list-custom-small">
-                <a href="#" data-toggle-theme data-trigger-switch="switch-dark-mode" class="pb-2 ml-n1">
-                    <i class="fa font-12 fa-moon rounded-s bg-highlight color-white mr-3"></i>
-                    <span>Dark Mode</span>
-                    <div class="custom-control scale-switch ios-switch">
-                        <input data-toggle-theme-switch type="checkbox" class="ios-input" id="switch-dark-mode">
-                        <label class="custom-control-label" for="switch-dark-mode"></label>
+        <div class="cover-slider owl-carousel owl-dots-no-footer text-center">
+            <div data-card-height="cover" class="card bg-transparent">
+                <div class="card-center">
+                    <div class="content mt-n5">
+                        <img class="mb-3 mx-auto" width="320" src="images/undraw/1.svg">
+                        <h1 class="mb-0 font-30"> Welcome in TempusXR</h1>
+                        <p class="mt-n1 color-highlight font-12">The application where communication is done differently!</p>
+                        <p class="boxed-text-xl">
+                            With TempusXR, use Extended Reality to get people talking about 
+                            you, your products and services.
+                        </p>
                     </div>
-                    <i class="fa fa-angle-right"></i>
-                </a>    
-            </div>
-            <div class="list-group list-custom-small">
-                <a href="#" data-trigger-switch="sidebar-31-switch-3"  class="pb-2 ml-n1">
-                    <i class="fa font-12 fa-bell rounded-s bg-blue2-dark"></i>
-                    <span>Notifications</span>
-                    <div class="custom-control scale-switch ios-switch">
-                        <input  type="checkbox" class="ios-input" id="sidebar-31-switch-3" checked >
-                        <label class="custom-control-label" for="switch-dark-mode"></label>
+                </div>
+            </div>         
+
+            <div data-card-height="cover" class="card bg-transparent">
+                <div class="card-center">
+                    <div class="content mt-n5">
+                        <img class="mb-3 mx-auto" width="320" src="images/undraw/4.svg">
+                        <h1 class="mb-0 font-28"> Customize the app</h1>
+                        <p class="mt-n1 color-highlight font-12">Make TempusXR your own with your colors</p>
+                        <p class="boxed-text-xl">
+                            The application directly takes the colors of your 
+                            graphic charter for each of your experiences
+                        </p>
                     </div>
-                    <i class="fa fa-angle-right"></i>
-                </a>    
-            </div>
-            <div class="list-group list-custom-large">
-                <a data-menu="menu-share" href="#">
-                    <i class="fa font-14 fa fa-share-alt bg-green1-dark rounded-s"></i>
-                    <span>Share the app</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>        
-                <a href="page-about.html" class="border-0">
-                    <i class="fa font-14 fa-cog bg-blue2-dark rounded-s"></i>
-                    <span>About the app</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>        
+                </div>
+            </div>   
+            <div data-card-height="cover" class="card bg-transparent">
+                <div class="card-center">
+                    <div class="content mt-n5">
+                        <img class="mb-3 mx-auto" width="250" src="images/undraw/3.svg">
+                        <h1 class="mb-0 font-30"> Built for You</h1>
+                        <p class="mt-n1 color-highlight font-12">We listen to all your Feedback and provides the best experience</p>
+                        <p class="boxed-text-xl">
+                            Whether you are an individual or a company, this app are designed to provide the best eXtended Reality
+                            for your needs. Use it, create your own experience and let the magic operates.
+                        </p>
+                    </div>
+                </div>
+            </div>         
+
+            <div data-card-height="cover" class="card bg-transparent">
+                <div class="card-center">
+                    <div class="content mt-n5">
+                        <img class="mb-3 mb-3 mx-auto" width="280" src="images/undraw/2.svg">
+                        <h1 class="mb-0 font-30">Install the mobile app now!</h1>
+                        <p class="mt-n1 color-highlight font-12">It's Mobile. So it's super, super fast! Really!</p>
+                        <p class="boxed-text-xl">
+                            Add TempusXR to the home screen as a mobile app. Don't worry about the Google Playstore, or the AppStore. 
+                            From your browser, add tempus to your applications and it will cost you nothing. 
+                            TempusXR is extremely super light
+                        </p>
+                    </div>
+                </div>
+            </div>         
+
+            <div data-card-height="cover" class="card bg-transparent">
+                <div class="card-center text-center">
+                    <div class="content mt-n5">
+                        <img class="mb-3 mx-auto" width="275" src="images/undraw/5.svg">
+                        <h1 class="mb-0 font-28">Optimized for the night mode</h1>
+                        <p class="mt-n1 color-highlight font-12">Turn off the light. Activate the night mode</p>
+                        <p class="boxed-text-xl">
+                            Dark mode integrated into the app, to make things easy for you to change.
+                            Switch to night mode for more convenience,
+                        </p>
+                    </div>
+                </div>
+            </div>  
+            
+                  
+            <div data-card-height="cover" class="card bg-transparent">
+                <div class="card-center">
+                    <div class="content mt-n5">
+                        <img class="mb-3 mx-auto" width="285" src="images/undraw/6.svg">
+                        <h1 class="mb-0 font-28"> And much more!</h1>
+                        <p class="mt-n1 color-highlight font-12">All packed together with hundreds of features.</p>
+                        <p class="boxed-text-xl">
+                            TempusXR is not just your average application. 
+                            We packed in a lot of features to brings your the best of Augmented Reality, Virtual Reality
+                            and Artificial Intelligence.
+                        </p>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <div class="cover-button-bottom">
+            <div class="row mb-0">
+                <div class="col-4 pl-0">
+                    <a href="home.html" class="btn btn-m rounded-l btn-full color-highlight border-highlight font-900 text button-m">SKIP</a>
+                </div>
+                <div class="col-8 pr-0">
+                    <a href="#" data-menu="menu-signin" class="btn btn-m rounded-l btn-full bg-highlight font-900 text button-m">LOGIN</a>
+                </div>
             </div>
         </div>
+        <a href="#" class="cover-next color-gray2-dark">Next<i class="fa fa-angle-right mr-4 ml-3"></i></a>
+        <a href="#" class="cover-prev color-gray2-dark"><i class="fa fa-angle-left mr-4 ml-3"></i>Back</a>
+
     </div>
-    <!-- Menu Share -->
-    <div id="menu-share" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="345" data-menu-effect="menu-over">
-        <div class="menu-title mt-n1"><h1>Share the Love</h1><p class="color-highlight">Just Tap the Social Icon. We'll add the Link</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
-        <div class="content mb-0">
-            <div class="divider mb-0"></div>
-            <div class="list-group list-custom-small list-icon-0">
-                <a href="#" class="shareToFacebook">
-                    <i class="font-18 fab fa-facebook color-facebook"></i>
-                    <span class="font-13">Facebook</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                <a href="#" class="shareToTwitter">
-                    <i class="font-18 fab fa-twitter-square color-twitter"></i>
-                    <span class="font-13">Twitter</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                <a href="#" class="shareToLinkedIn">
-                    <i class="font-18 fab fa-linkedin color-linkedin"></i>
-                    <span class="font-13">LinkedIn</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>        
-                <a href="#" class="shareToWhatsApp">
-                    <i class="font-18 fab fa-whatsapp-square color-whatsapp"></i>
-                    <span class="font-13">WhatsApp</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>   
-                <a href="#" class="shareToMail border-0">
-                    <i class="font-18 fa fa-envelope-square color-mail"></i>
-                    <span class="font-13">Email</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
+
+    <div id="menu-signin" class="menu menu-box-bottom menu-box-detached rounded-m"
+         data-menu-height="330"
+         data-menu-effect="menu-parallax">
+        <div class="mr-3 ml-3 mt-4">
+            <h1 class="text-uppercase font-900 mb-0">LOGIN</h1>
+            <p class="font-11  mt-n1 mb-2">
+                Hello, stranger! Please enter your credentials below.
+            </p>
+
+            <div class="input-style has-icon input-style-1 input-required">
+                <i class="input-icon fa fa-user font-11"></i>
+                <span>Username</span>
+                <em>(required)</em>
+                <input type="name" placeholder="Username">
+            </div> 
+            <div class="input-style has-icon input-style-1 input-required">
+                <i class="input-icon fa fa-lock font-11"></i>
+                <span>Password</span>
+                <em>(required)</em>
+                <input type="password" placeholder="Password">
+            </div>   
+            <div class="row">
+                <div class="col-6">
+                    <a href="#" data-menu="menu-forgot" class="font-10">Forgot Password?</a>
+                </div>
+                <div class="col-6">
+                    <a data-menu="menu-signup" href="#" class="float-right font-10">Create Account</a>
+                    <div class="clearfix"></div>
+                </div>
             </div>
+            <a href="home.html" data-menu="menu-signup" class="btn btn-full btn-m shadow-l rounded-s text-uppercase font-900 bg-green1-dark mt-4">LOGIN</a>
+        </div>
+    </div>   
+    
+    <div id="menu-signup" class="menu menu-box-bottom menu-box-detached rounded-m"
+         data-menu-height="370" 
+         data-menu-effect="menu-parallax">
+        <div class="mr-3 ml-3 mt-4">
+            <h1 class="text-uppercase font-900 mb-0">Register</h1>
+            <p class="font-11  mt-n1 mb-0">
+                Don't have an account? Register below.
+            </p>
+
+            <div class="input-style has-icon input-style-1 input-required">
+                <i class="input-icon fa fa-user font-11"></i>
+                <span>Username</span>
+                <em>(required)</em>
+                <input type="name" placeholder="Username">
+            </div> 
+            <div class="input-style has-icon input-style-1 input-required">
+                <i class="input-icon fa fa-at"></i>
+                <span>Email</span>
+                <em>(required)</em>
+                <input type="email" placeholder="Email">
+            </div>         
+            <div class="input-style has-icon input-style-1 input-required">
+                <i class="input-icon fa fa-lock font-11"></i>
+                <span>Password</span>
+                <em>(required)</em>
+                <input type="password" placeholder="Choose a Password">
+            </div>        
+            <p class="text-center pb-0 mb-n1 pt-1">
+                <a href="#" data-menu="menu-signin" class="text-center font-11 color-gray2-dark">Already Registered? Sign In Here.</a>
+            </p>
+            <a href="#" class="btn btn-full btn-m shadow-l rounded-s text-uppercase font-900 bg-blue2-dark mt-4">Register</a>
         </div>
     </div>
+    
+    <div id="menu-forgot" class="menu menu-box-bottom menu-box-detached rounded-m" 
+         data-menu-height="230" 
+         data-menu-effect="menu-parallax">
+        <div class="mr-3 ml-3 mt-4">
+            <h2 class="text-uppercase font-900 mb-0">Forgot Password?</h2>
+            <p class="font-11 mb-3">
+                Let's get you back into your account. Enter your email to reset.
+            </p>
+            <div class="input-style has-icon input-style-1 input-required mb-4">
+                <i class="input-icon fa fa-at"></i>
+                <span>Email</span>
+                <em>(required)</em>
+                <input type="email" placeholder="Email">
+            </div>   
+            <a href="#" class="btn btn-full btn-m shadow-l rounded-s bg-highlight text-uppercase font-900 top-20">SEND RECOVERY EMAIL</a>
+        </div>
+    </div>     
     
     <!-- Be sure this is on your main visiting page, for example, the index.html page-->
     <!-- Install Prompt for Android -->
@@ -342,9 +223,9 @@
         data-menu-effect="menu-parallax">
         <div class="boxed-text-l mt-4">
             <img class="rounded-l mb-3" src="app/icons/icon-128x128.png" alt="img" width="90">
-            <h4 class="mt-3">Add Sticky on your Home Screen</h4>
+            <h4 class="mt-3">Add TempusXR on your Home Screen</h4>
             <p>
-                Install Sticky on your home screen, and access it just like a regular app. It really is that simple!
+                Install TempusXR on your home screen, and access it just like a regular app. It really is that simple!
             </p>
             <a href="#" class="pwa-install btn btn-s rounded-s shadow-l text-uppercase font-900 bg-highlight mb-2">Add to Home Screen</a><br>
             <a href="#" class="pwa-dismiss close-menu color-gray2-light text-uppercase font-900 opacity-60 font-10">Maybe later</a>
@@ -359,121 +240,19 @@
         data-menu-effect="menu-parallax">
         <div class="boxed-text-xl mt-4">
             <img class="rounded-l mb-3" src="app/icons/icon-128x128.png" alt="img" width="90">
-            <h4 class="mt-3">Add Sticky on your Home Screen</h4>
+            <h4 class="mt-3">Add TempusXR on your Home Screen</h4>
             <p class="mb-0 pb-0">
-                Install Sticky on your home screen, and access it just like a regular app.  Open your Safari menu and tap "Add to Home Screen".
+                Install TempusXR on your home screen, and access it just like a regular app.  Open your Safari menu and tap "Add to Home Screen".
             </p>
             <div class="clear"></div>
             <a href="#" class="pwa-dismiss close-menu color-highlight uppercase ultrabold opacity-80 top-25">Maybe later</a>
             <i class="fa-ios-arrow fa fa-caret-down font-40"></i>
         </div>
     </div>
+
     
 </div>
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-<script type="text/javascript" src="scripts/zuck.min.js"></script>
-<script type="text/javascript" src="scripts/script.js"></script>
-<script>
-    
-    var currentSkin = getCurrentSkin();
-    var stories = new Zuck('stories', {
-        backNative: true,
-        previousTap: true,
-        skin: currentSkin['name'],
-        autoFullScreen: currentSkin['params']['autoFullScreen'],
-        avatars: currentSkin['params']['avatars'],
-        paginationArrows: currentSkin['params']['paginationArrows'],
-        list: currentSkin['params']['list'],
-        cubeEffect: currentSkin['params']['cubeEffect'],
-        localStorage: true,
-        stories: [
-          Zuck.buildTimelineItem(
-            "ramon", //id - photo -name-link-lastUpdated-items(list stories)
-            "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/1.jpg",
-            "Ramon",
-            "https://ramon.codes",
-            timestamp(),
-            [
-              ["ramon-1", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", '', false, false, timestamp()],
-              ["ramon-2", "video", 0, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.mp4", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.jpg", '', false, false, timestamp()],
-              ["ramon-3", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'https://ramon.codes', 'Visit my Portfolio', false, timestamp()]
-            ]
-          ),
-          Zuck.buildTimelineItem(
-            "gorillaz",
-            "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/2.jpg",
-            "Gorillaz",
-            "",
-            timestamp(),
-            [
-              ["gorillaz-1", "video", 0, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/4.mp4", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/4.jpg", '', false, false, timestamp()],
-              ["gorillaz-2", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/5.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/5.jpg", '', false, false, timestamp()],
-            ]
-          ),
-          Zuck.buildTimelineItem(
-            "ladygaga",
-            "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/3.jpg",
-            "Lady Gaga",
-            "",
-            timestamp(),
-            [
-              ["ladygaga-1", "photo", 5, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/6.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/6.jpg", '', false, false, timestamp()],
-              ["ladygaga-2", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/7.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/7.jpg", 'http://ladygaga.com', false, false, timestamp()],
-            ]
-          ),
-          Zuck.buildTimelineItem(
-            "starboy",
-            "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/4.jpg",
-            "The Weeknd",
-            "",
-            timestamp(),
-            [
-              ["starboy-1", "photo", 5, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/8.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/8.jpg", '', false, false, timestamp()]
-            ]
-          ),
-          Zuck.buildTimelineItem(
-            "riversquomo",
-            "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/5.jpg",
-            "Rivers Cuomo",
-            "",
-            timestamp(),
-            [
-              ["riverscuomo", "photo", 10, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/9.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/9.jpg", '', false, false, timestamp()]
-            ]
-          ),
-          Zuck.buildTimelineItem(
-            "gab", 
-            "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/1.jpg",
-            "Gab",
-            "https://ramon.codes",
-            timestamp(),
-            [
-              ["ramon-1", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", '', false, false, timestamp()],
-              ["ramon-2", "video", 0, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.mp4", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.jpg", '', false, false, timestamp()],
-              ["ramon-3", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'https://ramon.codes', 'Visit my Portfolio', false, timestamp()]
-            ]
-          ),
-          Zuck.buildTimelineItem(
-            "roaster", 
-            "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/1.jpg",
-            "Roaster",
-            "https://ramon.codes",
-            timestamp(),
-            [
-              ["ramon-1", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", '', false, false, timestamp()],
-              ["ramon-2", "video", 0, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.mp4", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.jpg", '', false, false, timestamp()],
-              ["ramon-3", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'https://ramon.codes', 'Visit my Portfolio', false, timestamp()]
-            ]
-          ),
-         
-        ],
-        onDataUpdate (currentState, callback) {
-            callback(); // use to update state on your reactive framework
-        }
-      });
-</script>
 <script type="text/javascript" src="scripts/custom.js"></script>
-
-
 </body>
