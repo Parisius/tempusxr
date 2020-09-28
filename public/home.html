@@ -27,17 +27,24 @@
 <div id="page">
     
     <div id="footer-bar" class="footer-bar-3 ">
+        <a href="page-instant.html"><i class="fa fa-heart"></i><span>Favoris</span></a>
         <a href="home.html" class="active-nav"><i class="fa fa-home"></i><span>Home</span></a>
-        <a href="index-components.html"><i class="fa fa-star"></i><span>Features</span></a>
-        <a href="index-pages.html"><i class="fa fa-heart"></i><span>Pages</span></a>
-        <a href="index-search.html"><i class="fa fa-search"></i><span>Search</span></a>
-        <a href="#" data-menu="menu-settings"><i class="fa fa-cog"></i><span>Settings</span><em class="badge bg-green1-dark">3</em></a>
+        <a href="page-profile-1.html"><i class="fa fa-user-alt"></i><span>Account</span></a>
+        <!-- <a href="#" data-menu="menu-settings"><i class="fa fa-cog"></i><span>Settings</span><em class="badge bg-green1-dark">3</em></a> -->
     </div>
       
     
     <div class="page-content header-clear-small">
         <div class="content mb-2">
-            <h3>Around the world</h3>
+            <div class="row justify-content">
+                <div class="col-2">
+                    <a href="#" data-menu="menu-settings">
+                        <i class="fa font-20 fa-bars color-magenta2-dark"></i>
+                    </a>
+                </div>
+                <div class="col-9"><h3>Around the world</h3></div>
+            </div>
+            
         </div> 
         <div id="stories" class=" storiesWrapper"></div>
         <!--Search -->
@@ -54,6 +61,12 @@
                         <i class="fab fa-apple color-gray2-dark"></i>
                         <span>Apple</span>
                         <strong>Works on iOS 10 and Higher</strong>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    <a href="page-profile-1.html" data-filter-item data-filter-name="all demo smartphone apple iphone">
+                        <i class="fab fa-android color-green1-dark"></i>
+                        <span>IRLLab</span>
+                        <strong>A company specialized in MR in Benin</strong>
                         <i class="fa fa-angle-right"></i>
                     </a>
                     <a href="#" data-filter-item data-filter-name="all demo smartphone apple iphone">
@@ -374,7 +387,6 @@
 <script type="text/javascript" src="scripts/zuck.min.js"></script>
 <script type="text/javascript" src="scripts/script.js"></script>
 <script>
-    
     var currentSkin = getCurrentSkin();
     var stories = new Zuck('stories', {
         backNative: true,
