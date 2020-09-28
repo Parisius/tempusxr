@@ -58,19 +58,11 @@
     );
     AFRAME.registerComponent('next-button2', {
       init: function() {
-        const animationList = ["idle","Test 01"]
-        const model = document.getElementById('model')
-        const audio = document.getElementById('music');
-
         const nextButton2 = document.getElementById('nextbutton2')
         nextButton2.style.display = 'block'
         //let idx = 1 // Start with the 2nd animation because the model starts with idle animation
          const nextAnimation2 = () => {
-          audio.pause();
-          model.setAttribute('animation-mixer', {
-            clip: animationList[idx],
-            loop: 'repeat',
-          })
+          window.open("../../surveys.html?idexp=2","_self");
         } 
         
         nextButton2.onclick = nextAnimation2; // Switch to the next animation when the button is pressed.
@@ -79,7 +71,7 @@
     );
     AFRAME.registerComponent('next-button3', {
       init: function() {
-        const animationList = ["Test 01"]
+        const animationList = ["Armature|mixamo.com|Layer0"]
         const model = document.getElementById('model')
         const nextButton3 = document.getElementById('nextbutton3')
         const audio = document.getElementById('music');
@@ -102,12 +94,16 @@
   <body>
     <div class="nextbutton3" id="nextbutton3">Ecouter</div>
     <audio hidden controls id="music">
-      <source src="audio.mp3" type="audio/mp3">
+      <source src="spero.mp3" type="audio/mp3">
     </audio>
 
-    <button id="nextbutton2" style="display: none; z-index: 40"type="button">Pause</button>
+    <div class="button" id="nextbutton" style="display: none; z-index: 10">
+      <h2><i class="fa fa-share-alt"></i></h2>
+    </div>
+    <button id="nextbutton2" style="display: none; z-index: 40"type="button">Quittez</button>
     <a-scene
       xrweb
+      next-button
       next-button2
       next-button3
       gesture-detector
