@@ -23,17 +23,16 @@
 <div id="page">
     
     <div class="header header-fixed header-auto-show header-logo-center">
-        <a href="index.html" class="header-title">TempusXR</a>
+        <a href="home.html" class="header-title">TempusXR</a>
         <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
-        <a href="#" data-toggle-theme class="header-icon header-icon-4"><i class="fas fa-lightbulb"></i></a>
+        <a href="#" data-menu="menu-settings" class="header-icon header-icon-4"><i class="fa fa-cog"></i></a>
     </div>
     
-    <div id="footer-bar" class="footer-bar-1">
-        <a href="home.html"><i class="fa fa-home"></i><span>Home</span></a>
-        <a href="index-components.html"><i class="fa fa-star"></i><span>Features</span></a>
-        <a href="index-pages.html" class="active-nav"><i class="fa fa-heart"></i><span>Pages</span></a>
-        <a href="index-search.html"><i class="fa fa-search"></i><span>Search</span></a>
-        <a href="#" data-menu="menu-settings"><i class="fa fa-cog"></i><span>Settings</span></a>
+    <div id="footer-bar" class="footer-bar-3 ">
+        <a href="page-instant.html" ><i class="fa fa-heart"></i><span>Favorites</span></a>
+        <a href="home.html" ><i class="fa fa-home"></i><span>Home</span></a>
+        <a href="page-profile-1.html"><i class="fa fa-user-alt"></i><span>Account</span></a>
+        <!-- <a href="#" data-menu="menu-settings"><i class="fa fa-cog"></i><span>Settings</span><em class="badge bg-green1-dark">3</em></a> -->
     </div>
         
     <div class="page-content">
@@ -136,7 +135,7 @@
                     <div class="flex-shrink-1 mt-1">
                         <a href="#reviews"  class="icon icon-xs rounded-xl shadow-m ml-2 bg-orange-dark"><i class="fa fa-comment"></i></a>
                         <a href="#" data-menu="menu-share" class="icon icon-xs rounded-xl shadow-m ml-2 bg-blue2-dark"><i class="fa fa-share-alt"></i></a>
-                        <a href="#" data-menu="menu-share" class="icon icon-xs rounded-xl shadow-m ml-2 bg-red2-dark"><i class="fa fa-heart"></i></a>
+                        <a href="#" data-menu="menu-subscription-required" class="icon icon-xs rounded-xl shadow-m ml-2 bg-red2-dark"><i class="fa fa-heart"></i></a>
                     </div>
                 </div>
                 
@@ -441,6 +440,106 @@
             </div>
         </div>
     </div>
+
+    <!--login required-->
+    <div id="menu-subscription-required" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="385">
+        <div class="menu-title"><h1>Login Required</h1><p class="color-highlight">Comment,review and create your own experiences by login or creating an account</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
+        <div class="card card-style mx-0 rounded-0 bg-14 mt-3 mb-0" data-card-height="300">
+            <div class="card-center pl-3">
+                <h1 class="color-white font-28 mb-0">Login now</h1>
+                <h1 class="color-white font-31">for a full</h1>
+                <h1 class="color-white font-20 mt-n2">Feature access</h1>
+                <a href="#" data-menu="menu-signin" class="btn btn-m rounded-sm bg-highlight color-white mt-3 text-uppercase font-800">Login now</a>
+            </div>
+            <div class="card-overlay bg-black opacity-60"></div>
+        </div>
+    </div>
+
+    <div id="menu-signin" class="menu menu-box-bottom menu-box-detached rounded-m"
+         data-menu-height="330"
+         data-menu-effect="menu-parallax">
+        <div class="mr-3 ml-3 mt-4">
+            <h1 class="text-uppercase font-900 mb-0">LOGIN</h1>
+            <p class="font-11  mt-n1 mb-2">
+                Hello, stranger! Please enter your credentials below.
+            </p>
+
+            <div class="input-style has-icon input-style-1 input-required">
+                <i class="input-icon fa fa-user font-11"></i>
+                <span>Username</span>
+                <em>(required)</em>
+                <input type="name" placeholder="Username">
+            </div> 
+            <div class="input-style has-icon input-style-1 input-required">
+                <i class="input-icon fa fa-lock font-11"></i>
+                <span>Password</span>
+                <em>(required)</em>
+                <input type="password" placeholder="Password">
+            </div>   
+            <div class="row">
+                <div class="col-6">
+                    <a href="#" data-menu="menu-forgot" class="font-10">Forgot Password?</a>
+                </div>
+                <div class="col-6">
+                    <a data-menu="menu-signup" href="#" class="float-right font-10">Create Account</a>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <a href="home.html" data-menu="menu-signup" class="btn btn-full btn-m shadow-l rounded-s text-uppercase font-900 bg-green1-dark mt-4">LOGIN</a>
+        </div>
+    </div>   
+    
+    <div id="menu-signup" class="menu menu-box-bottom menu-box-detached rounded-m"
+         data-menu-height="370" 
+         data-menu-effect="menu-parallax">
+        <div class="mr-3 ml-3 mt-4">
+            <h1 class="text-uppercase font-900 mb-0">Register</h1>
+            <p class="font-11  mt-n1 mb-0">
+                Don't have an account? Register below.
+            </p>
+
+            <div class="input-style has-icon input-style-1 input-required">
+                <i class="input-icon fa fa-user font-11"></i>
+                <span>Username</span>
+                <em>(required)</em>
+                <input type="name" placeholder="Username">
+            </div> 
+            <div class="input-style has-icon input-style-1 input-required">
+                <i class="input-icon fa fa-at"></i>
+                <span>Email</span>
+                <em>(required)</em>
+                <input type="email" placeholder="Email">
+            </div>         
+            <div class="input-style has-icon input-style-1 input-required">
+                <i class="input-icon fa fa-lock font-11"></i>
+                <span>Password</span>
+                <em>(required)</em>
+                <input type="password" placeholder="Choose a Password">
+            </div>        
+            <p class="text-center pb-0 mb-n1 pt-1">
+                <a href="#" data-menu="menu-signin" class="text-center font-11 color-gray2-dark">Already Registered? Sign In Here.</a>
+            </p>
+            <a href="#" class="btn btn-full btn-m shadow-l rounded-s text-uppercase font-900 bg-blue2-dark mt-4">Register</a>
+        </div>
+    </div>
+    
+    <div id="menu-forgot" class="menu menu-box-bottom menu-box-detached rounded-m" 
+         data-menu-height="230" 
+         data-menu-effect="menu-parallax">
+        <div class="mr-3 ml-3 mt-4">
+            <h2 class="text-uppercase font-900 mb-0">Forgot Password?</h2>
+            <p class="font-11 mb-3">
+                Let's get you back into your account. Enter your email to reset.
+            </p>
+            <div class="input-style has-icon input-style-1 input-required mb-4">
+                <i class="input-icon fa fa-at"></i>
+                <span>Email</span>
+                <em>(required)</em>
+                <input type="email" placeholder="Email">
+            </div>   
+            <a href="#" class="btn btn-full btn-m shadow-l rounded-s bg-highlight text-uppercase font-900 top-20">SEND RECOVERY EMAIL</a>
+        </div>
+    </div> 
  
 </div>
 <script type="text/javascript" src="scripts/jquery.js"></script>
