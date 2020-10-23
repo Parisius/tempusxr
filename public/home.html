@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
     <link rel="stylesheet" href="styles/zuck.min.css">
-    <link rel="stylesheet" href="styles/skins/snapgram.css">
+    <link rel="stylesheet" href="styles/skins/snapgram.min.css">
 </head>
     
 <body class="theme-light" data-background="none" data-highlight="irllab">
@@ -46,13 +46,47 @@
             </div>
             
         </div> 
-        <div id="stories" class=" storiesWrapper"></div>
+        <!-- <div id="stories" class=" storiesWrapper"></div> -->
+        <div id="stories">
+            <!-- story -->
+            <div class="story {{ story.seen ? 'seen' : '' }}" data-id="{{storyId}}" data-last-updated="{{story.lastUpdated}}" data-photo="story.photo">
+                <a class="item-link" href="{{story.link}}">
+                  <span class="item-preview">
+                    <img src="<!-- {{story.photo}} -->"/>
+                  </span>
+                  <span class="info" itemProp="author" itemScope="" itemType="http://schema.org/Person">
+                    <strong class="name" itemProp="name">IRLLab</strong>
+                    <span class="time">A few minutes</span>
+                  </span>
+                </a>
+                
+                <ul class="items">
+                    <!-- story item -->
+                    <li data-id="{{storyItemId}}" data-time="{{storyItem.time}}" class="{{storyItem.seen}}">
+                        <a href="{{storyItem.src}}"
+                         data-type="{{storyItem.type}}" 
+                         data-length="{{storyItem.length}}" 
+                         data-link="{{storyItem.link}}" 
+                         data-linkText="{{storyItem.linkText}}" 
+                         
+                         data-custom-key="{{storyItem.custom-key}}" 
+                         data-another-custom-key="{{storyItem.another-custom-key}}">
+                            <img src="{{storyItem.preview}}" />
+                        </a>
+                    </li>
+                    <!--/ story item -->
+                    
+                </ul>
+            </div>
+            <!--/ story -->
+            
+        </div>
         <!--Search -->
         <div class="search-box search-header bg-theme card-style mr-3 ml-3">
             <i class="fa fa-search"></i>
             <input type="text" class="border-0" placeholder="What are you looking for? " data-search>
             <a href="#" class="disabled"><i class="fa fa-times-circle color-red2-dark"></i></a>
-            <!-- <a href="component-colors.html"><i class="fa fa-qrcode font-30 color-magenta2-dark"></i></a> -->
+            <!-- <a href="index.html"><i class="fa fa-qrcode font-20 color-magenta2-dark"></i></a> -->
         </div>
         <div class="content ">
             <div class="search-results disabled-search-list">
@@ -404,101 +438,75 @@
 <script type="text/javascript" src="scripts/script.js"></script>
 <script>
     var currentSkin = getCurrentSkin();
-    var stories = new Zuck('stories', {
-        backNative: true,
-        previousTap: true,
-        skin: currentSkin['name'],
-        autoFullScreen: currentSkin['params']['autoFullScreen'],
-        avatars: currentSkin['params']['avatars'],
-        paginationArrows: currentSkin['params']['paginationArrows'],
-        list: currentSkin['params']['list'],
-        cubeEffect: currentSkin['params']['cubeEffect'],
-        localStorage: true,
-        stories: [
-          Zuck.buildTimelineItem(
-            "ramon", //id - photo -name-link-lastUpdated-items(list stories)
-            "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/1.jpg",
-            "Ramon",
-            "https://ramon.codes",
-            timestamp(),
-            [
-              ["ramon-1", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", '', false, false, timestamp()],
-              ["ramon-2", "video", 0, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.mp4", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.jpg", '', false, false, timestamp()],
-              ["ramon-3", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'https://ramon.codes', 'Visit my Portfolio', false, timestamp()]
-            ]
-          ),
-          Zuck.buildTimelineItem(
-            "gorillaz",
-            "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/2.jpg",
-            "Gorillaz",
-            "",
-            timestamp(),
-            [
-              ["gorillaz-1", "video", 0, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/4.mp4", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/4.jpg", '', false, false, timestamp()],
-              ["gorillaz-2", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/5.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/5.jpg", '', false, false, timestamp()],
-            ]
-          ),
-          Zuck.buildTimelineItem(
-            "ladygaga",
-            "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/3.jpg",
-            "Lady Gaga",
-            "",
-            timestamp(),
-            [
-              ["ladygaga-1", "photo", 5, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/6.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/6.jpg", '', false, false, timestamp()],
-              ["ladygaga-2", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/7.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/7.jpg", 'http://ladygaga.com', false, false, timestamp()],
-            ]
-          ),
-          Zuck.buildTimelineItem(
-            "starboy",
-            "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/4.jpg",
-            "The Weeknd",
-            "",
-            timestamp(),
-            [
-              ["starboy-1", "photo", 5, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/8.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/8.jpg", '', false, false, timestamp()]
-            ]
-          ),
-          Zuck.buildTimelineItem(
-            "riversquomo",
-            "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/5.jpg",
-            "Rivers Cuomo",
-            "",
-            timestamp(),
-            [
-              ["riverscuomo", "photo", 10, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/9.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/9.jpg", '', false, false, timestamp()]
-            ]
-          ),
-          Zuck.buildTimelineItem(
-            "gab", 
-            "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/1.jpg",
-            "Gab",
-            "https://ramon.codes",
-            timestamp(),
-            [
-              ["ramon-1", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", '', false, false, timestamp()],
-              ["ramon-2", "video", 0, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.mp4", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.jpg", '', false, false, timestamp()],
-              ["ramon-3", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'https://ramon.codes', 'Visit my Portfolio', false, timestamp()]
-            ]
-          ),
-          Zuck.buildTimelineItem(
-            "roaster", 
-            "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/1.jpg",
-            "Roaster",
-            "https://ramon.codes",
-            timestamp(),
-            [
-              ["ramon-1", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", '', false, false, timestamp()],
-              ["ramon-2", "video", 0, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.mp4", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.jpg", '', false, false, timestamp()],
-              ["ramon-3", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'https://ramon.codes', 'Visit my Portfolio', false, timestamp()]
-            ]
-          ),
-         
-        ],
-        onDataUpdate (currentState, callback) {
-            callback(); // use to update state on your reactive framework
-        }
-      });
+    var storyData;
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            
+            storyData = JSON.parse(JSON.stringify(data));
+            
+            console.table(storyData);
+            storyData.forEach(function(storyEl,i)
+            {
+                console.log(storyData[i].id); //id - photo -name-link-lastUpdated-items(list stories)
+                
+                for (var j in storyData[i]["storiesList"])
+                {
+                    console.log(storyData[i]["storiesList"][j].id)
+                }
+                
+                /* for(i = 0 ; i<storyData.length; i++)
+                {console.log(storyEl.id);
+                    console.log(storyData['id']);
+                    console.log(storyEl.avatar);
+                } */
+                
+                /*for (var storySel in storyEl)
+                {
+                    console.log(storyEl.id);
+                    console.log(storyEl.avatar);
+                    //console.log(`storyEl.${storySel} = ${storyEl[storySel]}`+" "+ typeof `${storyEl[storySel]}`);
+                    /* for (var storyItem in storySel)
+                    {
+                        console.log(`storyEl.${storySel}`);
+                    } */
+                /*} */
+                
+                
+            }) 
+            // Do something with your data
+            //console.log(storyData[0]["storiesList"][0].id, storyData[0]["storiesList"][0].type,);
+            storyData.forEach(function(storyEl,i)
+            {
+                let stories = new Zuck('stories', {
+                backNative: true,
+                previousTap: true,
+                skin: currentSkin['name'],
+                autoFullScreen: currentSkin['params']['autoFullScreen'],
+                avatars: currentSkin['params']['avatars'],
+                paginationArrows: currentSkin['params']['paginationArrows'],
+                list: currentSkin['params']['list'],
+                cubeEffect: currentSkin['params']['cubeEffect'],
+                localStorage: true,
+                stories: [
+                            Zuck.buildTimelineItem(
+                                storyData[i].id, //id - photo -name-link-lastUpdated-items(list stories)
+                                storyData[i].avatar,
+                                storyData[i].username,
+                                storyData[i].link,
+                                storyData[i].lastUpdated,
+                                storyData[i].storiesList,
+                            ),
+                        ],
+                onDataUpdate (currentState, callback) {
+                    callback(); // use to update state on your reactive framework
+                }
+            });
+            })  
+            
+        });
+    
+    
 </script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 
