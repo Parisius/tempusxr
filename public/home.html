@@ -52,7 +52,7 @@
             <div class="story {{ story.seen ? 'seen' : '' }}" data-id="{{storyId}}" data-last-updated="{{story.lastUpdated}}" data-photo="story.photo">
                 <a class="item-link" href="{{story.link}}">
                   <span class="item-preview">
-                    <img src="<!-- {{story.photo}} -->"/>
+                    <img src="images/pictures/mainwh.png"/>
                   </span>
                   <span class="info" itemProp="author" itemScope="" itemType="http://schema.org/Person">
                     <strong class="name" itemProp="name">IRLLab</strong>
@@ -442,43 +442,24 @@
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            
             storyData = JSON.parse(JSON.stringify(data));
-            
-            console.table(storyData);
-            storyData.forEach(function(storyEl,i)
-            {
-                console.log(storyData[i].id); //id - photo -name-link-lastUpdated-items(list stories)
-                
-                for (var j in storyData[i]["storiesList"])
-                {
-                    console.log(storyData[i]["storiesList"][j].id)
-                }
-                
-                /* for(i = 0 ; i<storyData.length; i++)
-                {console.log(storyEl.id);
-                    console.log(storyData['id']);
-                    console.log(storyEl.avatar);
-                } */
-                
-                /*for (var storySel in storyEl)
-                {
-                    console.log(storyEl.id);
-                    console.log(storyEl.avatar);
-                    //console.log(`storyEl.${storySel} = ${storyEl[storySel]}`+" "+ typeof `${storyEl[storySel]}`);
-                    /* for (var storyItem in storySel)
-                    {
-                        console.log(`storyEl.${storySel}`);
-                    } */
-                /*} */
-                
-                
-            }) 
             // Do something with your data
             //console.log(storyData[0]["storiesList"][0].id, storyData[0]["storiesList"][0].type,);
-            storyData.forEach(function(storyEl,i)
+            let timelineitems = [];
+            for(let i=0; i<storyData.length; i++)
             {
-                let stories = new Zuck('stories', {
+                let story = Zuck.buildTimelineItem(
+                        storyData[i].id, //id - photo -name-link-lastUpdated-items(list stories)
+                        storyData[i].avatar,
+                        storyData[i].username,
+                        storyData[i].link,
+                        storyData[i].lastUpdated,
+                        storyData[i].storiesList
+                    );
+                timelineitems.push(story);
+            }
+
+            let stories = new Zuck('stories', {
                 backNative: true,
                 previousTap: true,
                 skin: currentSkin['name'],
@@ -488,22 +469,12 @@
                 list: currentSkin['params']['list'],
                 cubeEffect: currentSkin['params']['cubeEffect'],
                 localStorage: true,
-                stories: [
-                            Zuck.buildTimelineItem(
-                                storyData[i].id, //id - photo -name-link-lastUpdated-items(list stories)
-                                storyData[i].avatar,
-                                storyData[i].username,
-                                storyData[i].link,
-                                storyData[i].lastUpdated,
-                                storyData[i].storiesList,
-                            ),
-                        ],
+                stories:timelineitems,
                 onDataUpdate (currentState, callback) {
                     callback(); // use to update state on your reactive framework
                 }
             });
-            })  
-            
+            stories.addItem("ramon", ["ladygaga-1", "photo", 5, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/6.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/6.jpg", '', false, false, timestamp()]);
         });
     
     
