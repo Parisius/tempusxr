@@ -1,0 +1,107 @@
+[   
+    {
+        "id": "ramon",
+        "avatar": "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/1.jpg",
+        "username": "Ramon",
+        "link":  "https://ramon.codes",
+        "lastUpdated": 1603272766,
+        "storiesList": [
+                [
+                    "ramon-1",
+                    "photo",
+                    3,
+                    "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg",
+                    "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg",  
+                    "",
+                    "Just Chilling",
+                    1603273306,    
+                    false 
+                ],
+                      
+                [
+                    "ramon-2",
+                    "video",
+                     0,
+                    "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.mp4",
+                    "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.jpg",  
+                    "",
+                    "Just Testing",
+                    false,   
+                    1603273306 
+                ],
+                [
+                    "ramon-3",
+                    "photo",
+                    3,
+                    "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png",
+                    "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png",  
+                    "https://ramon.codes",
+                    "Visit my Portfolio",
+                    false,
+                    1603273306   
+                ]
+        ]
+    },
+    {
+        "id": "parisius",
+        "avatar": "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/2.jpg",
+        "username": "Parisius",
+        "link":  "https://ramon.codes",
+        "lastUpdated": 1603272766,
+        "storiesList": [
+                [
+                    "parisius-1",
+                    "photo",
+                     3,
+                    "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/5.jpg",
+                    "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/5.jpg",  
+                    "",
+                    "Just Chilling",
+                    1603273306,    
+                    false   
+                ],
+                [
+                    "parisius-2",
+                    "video",
+                     0,
+                    "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/4.mp4",
+                    "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/4.jpg",  
+                    "",
+                    "Just Testing",
+                    false,   
+                    1603273306 
+                ]            
+        ]
+    },
+    {
+        "id": "dorian",
+        "avatar": "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/3.jpg",
+        "username": "Dorian",
+        "link":  "https://ramon.codes",
+        "lastUpdated": 1603272766,
+        "storiesList": [
+            [
+                "dorian-1",
+                "photo",
+                3,
+                "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/6.jpg",
+                "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/6.jpg",  
+                "",
+                "Just Chilling",
+                1603273306,    
+                false 
+            ],
+            [
+                "dorian-2",
+                "photo",
+                3,
+                "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/7.jpg",
+                "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/7.jpg",  
+                "",
+                "Just Testing",
+                false,   
+                1603273306 
+            ]
+        ]
+    }
+]
