@@ -49,13 +49,13 @@
         <!-- <div id="stories" class=" storiesWrapper"></div> -->
         <div id="stories">
             <!-- story -->
-            <div class="story {{ story.seen ? 'seen' : '' }}" data-id="{{storyId}}" data-last-updated="{{story.lastUpdated}}" data-photo="story.photo">
+            <div class="story ">
                 <a class="item-link" href="#">
                   <span class="item-preview">
-                    <img src="images/pictures/mainwh.png"/>
+                    <img src="images/pictures/mainwh.png" >
                   </span>
                   <span class="info" itemProp="author" itemScope="" itemType="http://schema.org/Person">
-                    <strong class="name" itemProp="name">Add your story</strong>
+                    <strong class="name" itemProp="name">Add a story</strong>
                     <span class="time">A few minutes</span>
                   </span>
                 </a>
@@ -71,7 +71,7 @@
                          
                          data-custom-key="{{storyItem.custom-key}}" 
                          data-another-custom-key="{{storyItem.another-custom-key}}">
-                            <img src="{{storyItem.preview}}" />
+                            <img src="" />
                         </a>
                     </li>
                     <!--/ story item -->
