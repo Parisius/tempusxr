@@ -103,5 +103,67 @@
                 1603273306 
             ]
         ]
+    },
+    {
+        "id": "oscar",
+        "avatar": "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/5.jpg",
+        "username": "Oscar",
+        "link":  "https://ramon.codes",
+        "lastUpdated": 1603272766,
+        "storiesList": [
+            [
+                "oscar-1",
+                "photo",
+                3,
+                "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/6.jpg",
+                "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/6.jpg",  
+                "",
+                "Just Chilling",
+                1603273306,    
+                false 
+            ],
+            [
+                "oscar-2",
+                "photo",
+                3,
+                "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/7.jpg",
+                "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/7.jpg",  
+                "",
+                "Just Testing",
+                false,   
+                1603273306 
+            ]
+        ]
+    },
+    {
+        "id": "rascol",
+        "avatar": "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/4.jpg",
+        "username": "Rascol",
+        "link":  "https://ramon.codes",
+        "lastUpdated": 1603272766,
+        "storiesList": [
+            [
+                "rascol-1",
+                "photo",
+                3,
+                "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/6.jpg",
+                "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/6.jpg",  
+                "",
+                "Just Chilling",
+                1603273306,    
+                false 
+            ],
+            [
+                "rascol-2",
+                "photo",
+                3,
+                "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/7.jpg",
+                "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/7.jpg",  
+                "",
+                "Just Testing",
+                false,   
+                1603273306 
+            ]
+        ]
     }
 ]
