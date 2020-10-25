@@ -49,14 +49,14 @@
         <!-- <div id="stories" class=" storiesWrapper"></div> -->
         <div id="stories">
             <!-- story -->
-            <div class="story"  >
+            <div class="story {{ story.seen ? 'seen' : '' }}" data-id="{{storyId}}" data-last-updated="{{story.lastUpdated}}" data-photo="story.photo">
                 <a class="item-link" href="#">
                   <span class="item-preview">
                     <img src="images/pictures/mainwh.png"/>
                   </span>
                   <span class="info" itemProp="author" itemScope="" itemType="http://schema.org/Person">
-                    <strong class="name" itemProp="name">Add a story</strong>
-                    <span class="time"></span>
+                    <strong class="name" itemProp="name">Add your story</strong>
+                    <span class="time">A few minutes</span>
                   </span>
                 </a>
                 
