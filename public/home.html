@@ -46,8 +46,41 @@
             </div>
             
         </div> 
-        <div id="stories" class=" storiesWrapper"></div>
-        
+        <!-- <div id="stories" class=" storiesWrapper"></div> -->
+        <div id="stories">
+            <!-- story -->
+            <div class="story"  >
+                <a class="item-link" href="#">
+                  <span class="item-preview">
+                    <img src=""/>
+                  </span>
+                  <span class="info" itemProp="author" itemScope="" itemType="http://schema.org/Person">
+                    <strong class="name" itemProp="name">Add a story</strong>
+                    <span class="time"></span>
+                  </span>
+                </a>
+                
+                <ul class="items">
+                    <!-- story item -->
+                    <li data-id="{{storyItemId}}" data-time="{{storyItem.time}}" class="{{storyItem.seen}}">
+                        <a href="{{storyItem.src}}"
+                         data-type="{{storyItem.type}}" 
+                         data-length="{{storyItem.length}}" 
+                         data-link="{{storyItem.link}}" 
+                         data-linkText="{{storyItem.linkText}}" 
+                         
+                         data-custom-key="{{storyItem.custom-key}}" 
+                         data-another-custom-key="{{storyItem.another-custom-key}}">
+                            <img src="{{storyItem.preview}}" />
+                        </a>
+                    </li>
+                    <!--/ story item -->
+                    
+                </ul>
+            </div>
+            <!--/ story -->
+            
+        </div>
         <!--Search -->
         <div class="search-box search-header bg-theme card-style mr-3 ml-3">
             <i class="fa fa-search"></i>
