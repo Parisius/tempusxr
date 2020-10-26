@@ -1,4 +1,11 @@
 
+/*icon*/
+.scan {
+  fill: #94d31b; 
+}
+.scan:hover {
+  fill: #ace63c; 
+}
 
 /*Stories*/
 .storiesWrapper {

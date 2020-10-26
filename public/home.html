@@ -16,8 +16,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
     <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
-    <link rel="stylesheet" href="styles/zuck.min.css">
-    <link rel="stylesheet" href="styles/skins/snapgram.min.css">
 </head>
     
 <body class="theme-light" data-background="none" data-highlight="irllab">
@@ -26,6 +24,12 @@
 
 <div id="page">
     
+    <div class="header header-fixed header-logo-center">
+        <a href="home.html" class="header-title">TempusXR</a>
+        <a href="#" data-menu="menu-settings" class="header-icon header-icon-1"><i class="fa font-20 fa-bars color-magenta2-dark"></i></a>
+        <a href="qr_scanner.html" data-menu="menu-settings" class="header-icon header-icon-4"><i class="fa fa-qrcode font-20 color-magenta2-dark"></i>
+        </a>
+    </div>
     <div id="footer-bar" class="footer-bar-3 ">
         <a href="page-instant.html"><i class="fa fa-heart"></i><span>Favoris</span></a>
         <a href="home.html" class="active-nav"><i class="fa fa-home"></i><span>Home</span></a>
@@ -34,8 +38,9 @@
     </div>
       
     
-    <div class="page-content header-clear-small">
-        <div class="content mb-2">
+    <div class="page-content  header-clear-medium">
+
+        <!-- <div class="content mb-2">
             <div class="row justify-content">
                 <div class="col-2">
                     <a href="#" data-menu="menu-settings">
@@ -44,47 +49,12 @@
                 </div>
                 <div class="col-9"><h3>Around the world</h3></div>
             </div>
-            
-        </div> 
-        <!-- <div id="stories" class=" storiesWrapper"></div> -->
-        <div id="stories">
-            <!-- story -->
-            <div class="story"  >
-                <a class="item-link" href="#">
-                  <span class="item-preview">
-                    <img src=""/>
-                  </span>
-                  <span class="info" itemProp="author" itemScope="" itemType="http://schema.org/Person">
-                    <strong class="name" itemProp="name">Add a story</strong>
-                    <span class="time"></span>
-                  </span>
-                </a>
-                
-                <ul class="items">
-                    <!-- story item -->
-                    <li data-id="{{storyItemId}}" data-time="{{storyItem.time}}" class="{{storyItem.seen}}">
-                        <a href="{{storyItem.src}}"
-                         data-type="{{storyItem.type}}" 
-                         data-length="{{storyItem.length}}" 
-                         data-link="{{storyItem.link}}" 
-                         data-linkText="{{storyItem.linkText}}" 
-                         
-                         data-custom-key="{{storyItem.custom-key}}" 
-                         data-another-custom-key="{{storyItem.another-custom-key}}">
-                            <img src="{{storyItem.preview}}" />
-                        </a>
-                    </li>
-                    <!--/ story item -->
-                    
-                </ul>
-            </div>
-            <!--/ story -->
-            
-        </div>
+        </div>  -->
+        
         <!--Search -->
         <div class="search-box search-header bg-theme card-style mr-3 ml-3">
             <i class="fa fa-search"></i>
-            <input type="text" class="border-0" placeholder="What are you looking for? " data-search>
+            <input type="text" class="border-0" placeholder="Which experience are you looking for?" data-search>
             <a href="#" class="disabled"><i class="fa fa-times-circle color-red2-dark"></i></a>
             <!-- <a href="index.html"><i class="fa fa-qrcode font-20 color-magenta2-dark"></i></a> -->
         </div>
@@ -149,7 +119,7 @@
             <a href="#" >
                 <div class="card rounded-m shadow-l">
                     <div class="card-top">
-                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now</span>
+                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now <i class="color-white fa fa-camera" ></i></span>
                     </div>
                     <div class="card-bottom text-center mb-0">
                         <h1 class="color-white font-700 mb-n1">Power of Augmented Reality</h1>
@@ -162,7 +132,7 @@
             <a href="experiences-details1.html" >
                 <div class="card rounded-m shadow-l">
                     <div class="card-top">
-                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now</span>
+                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now <i class="color-white fa fa-camera" ></i></span>
                     </div>
                     <div class="card-bottom text-center mb-0">
                         <h1 class="color-white font-700 mb-n1">Discover a world</h1>
@@ -175,7 +145,7 @@
             <a href="#" >
                 <div class="card rounded-m shadow-l">
                     <div class="card-top">
-                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now</span>
+                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now <i class="color-white fa fa-camera" ></i></span>
                     </div>
                     <div class="card-bottom text-center mb-0">
                         <h1 class="color-white font-700 mb-n1">Learn & Play</h1>
@@ -188,7 +158,7 @@
             <a href="#" >
                 <div class="card rounded-m shadow-l">
                     <div class="card-top">
-                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now</span>
+                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now <i class="color-white fa fa-camera" ></i></span>
                     </div>
                     <div class="card-bottom text-center mb-0">
                         <h1 class="color-white font-700 mb-n1">Product Vizualition</h1>
@@ -298,6 +268,10 @@
                         <i class="fa fa-play-circle font-24 color-highlight"></i>
                     </div>
                 </a>
+
+                <div class="card-top">
+                    <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See more </span>
+                </div>
                 
             </div>           
         </div>
@@ -434,51 +408,6 @@
 </div>
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-<script type="text/javascript" src="scripts/zuck.min.js"></script>
-<script type="text/javascript" src="scripts/script.js"></script>
-<script>
-    var currentSkin = getCurrentSkin();
-    var storyData;
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            storyData = JSON.parse(JSON.stringify(data));
-            // Do something with your data
-            //console.log(storyData[0]["storiesList"][0].id, storyData[0]["storiesList"][0].type,);
-            let timelineitems = [];
-            for(let i=0; i<storyData.length; i++)
-            {
-                let story = Zuck.buildTimelineItem(
-                        storyData[i].id, //id - photo -name-link-lastUpdated-items(list stories)
-                        storyData[i].avatar,
-                        storyData[i].username,
-                        storyData[i].link,
-                        storyData[i].lastUpdated,
-                        storyData[i].storiesList
-                    );
-                timelineitems.push(story);
-            }
-
-            let stories = new Zuck('stories', {
-                backNative: true,
-                previousTap: true,
-                skin: currentSkin['name'],
-                autoFullScreen: currentSkin['params']['autoFullScreen'],
-                avatars: currentSkin['params']['avatars'],
-                paginationArrows: currentSkin['params']['paginationArrows'],
-                list: currentSkin['params']['list'],
-                cubeEffect: currentSkin['params']['cubeEffect'],
-                localStorage: true,
-                stories:timelineitems,
-                onDataUpdate (currentState, callback) {
-                    callback(); // use to update state on your reactive framework
-                }
-            });
-            stories.addItem("ramon", ["ladygaga-1", "photo", 5, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/6.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/6.jpg", '', false, false, timestamp()]);
-        });
-    
-    
-</script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 
 
