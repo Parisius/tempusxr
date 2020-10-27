@@ -191,7 +191,7 @@
     </div>
 
     <div id="menu-warning-1" class="menu menu-box-modal rounded-m" 
-         data-menu-height="300" 
+         data-menu-height="310" 
          data-menu-width="310">
         <h1 class="text-center mt-4"><i class="fa fa-3x fa-times color-red2-dark"></i></h1>
         <h1 class="text-center mt-3 text-uppercase font-900">Wooops!</h1>
@@ -263,6 +263,15 @@ fileinput.addEventListener('change', e => {
   html5QrCodeF.scanFile(imageFile, true)
   .then(qrCodeMessage => {
     // success, use qrCodeMessage
+    if(qrCodeMessage!="T-ARFur")
+        {
+            document.querySelectorAll('.boxed-text-l')['0'].innerText=`This experience ${qrCodeMessage} doesn't exist in TempusXR or has been removed.`;
+            $('#menu-warning-1').showMenu();
+        }
+        else
+        {
+            document.location='experiences-details.html';
+        }
   })
   .catch(err => {
     // failure, handle it.
