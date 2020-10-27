@@ -1,12 +1,16 @@
 
-/*icon*/
-.scan {
-  fill: #94d31b; 
+#qr-reader-results{
+  text-align: center;
+  font-size: medium;
+  color: #e8e9ea;
 }
-.scan:hover {
-  fill: #ace63c; 
+#vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-
 /*Stories*/
 .storiesWrapper {
   padding: 12px;
