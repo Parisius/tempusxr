@@ -55,7 +55,7 @@
 
             <div id="reader"></div>
             <div class="content mb-0">                
-                
+                <div id="qr-reader-results"></div>
                 <div class="divider"></div>
                 <div class="list-group list-custom-large upload-file-data disabled">
                     <a href="#" class="border-0">
@@ -82,7 +82,7 @@
                 </div>
                 <div class="file-data">
                     <input type="file"id="qr-input-file"  class="upload-file bg-highlight shadow-s rounded-s " accept="image/*">
-                    <p class="upload-file-text color-white">Select a TempusCode</p>
+                    <p class="upload-file-text color-white">Select a TCode</p>
                     <br>
                 </div>
                 
@@ -219,7 +219,7 @@
     
     const html5QrCode = new Html5Qrcode("reader",true);
     html5QrCode.start({ facingMode: "environment" }, {fps: 10,qrbox: 250 }, qrCodeMessage => {
-        console.log(`QR matched = ${qrCodeMessage}`);
+        // console.log(`QR matched = ${qrCodeMessage}`);
         if(qrCodeMessage!="T-ARFur")
         {
             document.querySelectorAll('.boxed-text-l')['0'].innerText=`This experience ${qrCodeMessage} doesn't exist in TempusXR or has been removed.`;
@@ -236,6 +236,7 @@
         // Stop failed, handle it.
         });
     },errorMessage => {
+        
         //console.warn(`QR matched = ${errorMessage}`);
         //result.innerHTML =`We are unable to read your code. Please retry`;
         //console.warn(`QR error = ${errorMessage}`);
@@ -275,8 +276,9 @@ fileinput.addEventListener('change', e => {
   })
   .catch(err => {
     // failure, handle it.
-    console.log(`Error scanning file. Reason: ${err}`),
-    result.innerHTML ='We are unable to read your code. Please retry';
+    //console.log(`Error scanning file. Reason: ${err}`),
+    result.innerHTML ='Your file is not a TCode. We are unable to read your code. Please retry';
+    //document.querySelectorAll('.boxed-text-l')['0'].innerText=`Your file is not a TCode`;
     //`You can scan a TempusCode or upload it by using the button below `;
   });
 });
