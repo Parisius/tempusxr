@@ -26,12 +26,12 @@
     
     <div class="header header-fixed header-logo-center">
         <a href="home.html" data-back-button class="header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
-        <a href="#" data-menu="menu-settings" class="header-icon header-icon-4"><i class="fa font-20 fa-bars "></i></a>
+        <a href="#" data-menu="menu-settings" class="header-icon header-icon-4"><i class="fa fa-bars "></i></a>
     </div>
     <div id="footer-bar" class="footer-bar-3 ">
-        <a href="page-instant.html"><i class="fa fa-heart"></i><span>Favoris</span></a>
-        <a href="home.html" class="active-nav"><i class="fa fa-home"></i><span>Home</span></a>
-        <a href="page-profile-1.html"><i class="fa fa-user-alt"></i><span>Account</span></a>
+        <a data-vibrate="5" href="page-instant.html"><i class="fa fa-heart"></i><span tkey="favorite"></span></a>
+        <a data-vibrate="5" href="home.html"><i class="fa fa-home"></i><span tkey="home">Home</span></a>
+        <a data-vibrate="5" href="page-profile-1.html"><i class="fa fa-user-alt"></i><span tkey="account">Account</span></a>
         <!-- <a href="#" data-menu="menu-settings"><i class="fa fa-cog"></i><span>Settings</span><em class="badge bg-green1-dark">3</em></a> -->
     </div>
       
@@ -39,11 +39,8 @@
     <div class="page-content header-clear-medium">
         <div class="card card-style preload-img" data-src="images/pictures/18w.jpg" data-card-height="130">
             <div class="card-center ml-3">
-                <h1 class="color-white mb-0">Find an experience</h1>
-                <p class="color-white mt-n1 mb-0">Use a Tcode to find an experience.<br> 
-                     You can either scan it or upload it from your gallery 
-                </p>
-                <p class="color-white mt-n1 mb-0">by using the button below</p>
+                <h1 class="color-white mb-0"tkey="qr_code_find">Find an experience</h1>
+                <p class="color-white mt-n1 mb-0"tkey="qr_code_desc"></p>
                 
             </div>
             <div class="card-center mr-3">
@@ -60,7 +57,7 @@
                 <div class="list-group list-custom-large upload-file-data disabled">
                     <a href="#" class="border-0">
                         <i class="fa font-14 fa-info-circle color-blue2-dark"></i>
-                        <span>File Name</span>
+                        <span tkey="qr_code_file">File Name</span>
                         <strong class="upload-file-name">JS Populated</strong>
                     </a>        
                     <br>
@@ -82,7 +79,7 @@
                 </div>
                 <div class="file-data">
                     <input type="file"id="qr-input-file"  class="upload-file bg-highlight shadow-s rounded-s " accept="image/*">
-                    <p class="upload-file-text color-white">Select a TCode</p>
+                    <p class="upload-file-text color-white"tkey="qr_btn_scan">Select a TCode</p>
                     <br>
                 </div>
                 
@@ -100,13 +97,13 @@
     
     <!-- End of Page Content--> 
     <div id="menu-settings" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="308">
-        <div class="menu-title"><h1>Settings</h1><p class="color-highlight">Flexible and Easy to Use</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
+        <div class="menu-title"><h1 tkey="settings">Settings</h1><p class="color-highlight" tkey="settings_desc">Flexible and Easy to Use try </p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
         <div class="divider divider-margins mb-n2"></div>
         <div class="content">
             <div class="list-group list-custom-small">
-                <a href="#" data-toggle-theme data-trigger-switch="switch-dark-mode" class="pb-2 ml-n1">
+                <a data-vibrate="5" href="#" data-toggle-theme data-trigger-switch="switch-dark-mode" class="pb-2 ml-n1">
                     <i class="fa font-12 fa-moon rounded-s bg-highlight color-white mr-3"></i>
-                    <span>Dark Mode</span>
+                    <span tkey="dark">Dark Mode</span>
                     <div class="custom-control scale-switch ios-switch">
                         <input data-toggle-theme-switch type="checkbox" class="ios-input" id="switch-dark-mode">
                         <label class="custom-control-label" for="switch-dark-mode"></label>
@@ -115,9 +112,9 @@
                 </a>    
             </div>
             <div class="list-group list-custom-small">
-                <a href="#" data-trigger-switch="sidebar-31-switch-3"  class="pb-2 ml-n1">
+                <a data-vibrate="5" href="#" data-trigger-switch="sidebar-31-switch-3"  class="pb-2 ml-n1">
                     <i class="fa font-12 fa-bell rounded-s bg-blue2-dark"></i>
-                    <span>Notifications</span>
+                    <span tkey="notifications">Notifications</span>
                     <div class="custom-control scale-switch ios-switch">
                         <input  type="checkbox" class="ios-input" id="sidebar-31-switch-3" checked >
                         <label class="custom-control-label" for="switch-dark-mode"></label>
@@ -126,30 +123,30 @@
                 </a>    
             </div>
             <div class="list-group list-custom-small">
-                <a href="#"class="pb-2 ml-n1">
+                <a data-vibrate="5" href="#"class="pb-2 ml-n1">
                     <i class="fa font-12 fa-plus rounded-s bg-orange-dark"></i>
-                    <span>Create your experience</span>
+                    <span tkey="create_exp">Create your experience</span>
                     <i class="fa fa-angle-right"></i>
                 </a>    
             </div>
             <div class="list-group list-custom-small">
-                <a href="page-contact.html"class="pb-2 ml-n1">
+                <a data-vibrate="5" href="page-contact.html"class="pb-2 ml-n1">
                     <i class="fa font-12 fa-headset rounded-s bg-teal-dark"></i>
-                    <span>Support</span>
+                    <span tkey="support">Support</span>
                     <i class="fa fa-angle-right"></i>
                 </a>    
             </div>
             <div class="list-group list-custom-small">
-                <a href="#" data-menu="menu-share"  class="pb-2 ml-n1">
+                <a data-vibrate="5" href="#" data-menu="menu-share"  class="pb-2 ml-n1">
                     <i class="fa font-12 fa-share-alt rounded-s bg-red2-dark"></i>
-                    <span>Share the app</span>
+                    <span tkey="share_app">Share the app</span>
                     <i class="fa fa-angle-right"></i>
                 </a>    
             </div>
             <div class="list-group list-custom-small">
-                <a href="page-about.html"class="pb-2 ml-n1">
+                <a data-vibrate="5" href="page-about.html"class="pb-2 ml-n1">
                     <i class="fa font-12 fa-info-circle rounded-s bg-aqua-dark"></i>
-                    <span>About the app</span>
+                    <span tkey="about">About the app</span>
                     <i class="fa fa-angle-right"></i>
                 </a>    
             </div>
@@ -157,31 +154,31 @@
     </div>
     <!-- Menu Share -->
     <div id="menu-share" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="345" data-menu-effect="menu-over">
-        <div class="menu-title mt-n1"><h1>Share the Love</h1><p class="color-highlight">Just Tap the Social Icon. We'll add the Link</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
+        <div class="menu-title mt-n1"><h1 tkey="share_exp">Share the Love</h1><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
         <div class="content mb-0">
             <div class="divider mb-0"></div>
             <div class="list-group list-custom-small list-icon-0">
-                <a href="#" class="shareToFacebook">
+                <a data-vibrate="5" href="#" class="shareToFacebook">
                     <i class="font-18 fab fa-facebook color-facebook"></i>
                     <span class="font-13">Facebook</span>
                     <i class="fa fa-angle-right"></i>
                 </a>
-                <a href="#" class="shareToTwitter">
+                <a data-vibrate="5" href="#" class="shareToTwitter">
                     <i class="font-18 fab fa-twitter-square color-twitter"></i>
                     <span class="font-13">Twitter</span>
                     <i class="fa fa-angle-right"></i>
                 </a>
-                <a href="#" class="shareToLinkedIn">
+                <a data-vibrate="5" href="#" class="shareToLinkedIn">
                     <i class="font-18 fab fa-linkedin color-linkedin"></i>
                     <span class="font-13">LinkedIn</span>
                     <i class="fa fa-angle-right"></i>
                 </a>        
-                <a href="#" class="shareToWhatsApp">
+                <a data-vibrate="5" href="#" class="shareToWhatsApp">
                     <i class="font-18 fab fa-whatsapp-square color-whatsapp"></i>
                     <span class="font-13">WhatsApp</span>
                     <i class="fa fa-angle-right"></i>
                 </a>   
-                <a href="#" class="shareToMail border-0">
+                <a data-vibrate="5" href="#" class="shareToMail border-0">
                     <i class="font-18 fa fa-envelope-square color-mail"></i>
                     <span class="font-13">Email</span>
                     <i class="fa fa-angle-right"></i>
@@ -195,7 +192,7 @@
          data-menu-width="310">
         <h1 class="text-center mt-4"><i class="fa fa-3x fa-times color-red2-dark"></i></h1>
         <h1 class="text-center mt-3 text-uppercase font-900">Wooops!</h1>
-        <p class="boxed-text-l">
+        <p class="boxed-text-l" tkey="favorite">
              This experience doesn't exist in TempusXR or has been removed.
         </p>
         <a href="#" class="close-menu btn btn-m btn-center-m button-s shadow-l rounded-s text-uppercase font-900 bg-red1-light">Go Back</a>
@@ -204,85 +201,9 @@
 </div>
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/lang.js"></script>
 <script type="text/javascript" src="scripts/html5-qrcode.min.js"></script>
-<script>
-    result = document.querySelector("#qr-reader-results");
-    
-    //console.log(document.querySelectorAll('.boxed-text-l')['0'].innerText);
-    Html5Qrcode.getCameras().then(devices => {
-  /**
-   * devices would be an array of objects of type:
-   * { id: "id", label: "label" }
-   */
-  if (devices && devices.length) {
-    var cameraId = devices[0].id;
-    
-    const html5QrCode = new Html5Qrcode("reader",true);
-    html5QrCode.start({ facingMode: "environment" }, {fps: 10,qrbox: 250 }, qrCodeMessage => {
-        // console.log(`QR matched = ${qrCodeMessage}`);
-        if(qrCodeMessage!="T-ARFur")
-        {
-            document.querySelectorAll('.boxed-text-l')['0'].innerText=`This experience ${qrCodeMessage} doesn't exist in TempusXR or has been removed.`;
-            $('#menu-warning-1').showMenu();
-        }
-        else
-        {
-            document.location='experiences-details.html';
-        }
-        html5QrCode.stop().then(ignore => {
-        // QR Code scanning is stopped.
-        
-        }).catch(err => {
-        // Stop failed, handle it.
-        });
-    },errorMessage => {
-        
-        //console.warn(`QR matched = ${errorMessage}`);
-        //result.innerHTML =`We are unable to read your code. Please retry`;
-        //console.warn(`QR error = ${errorMessage}`);
-    })
-    .catch(err => {
-    // Start failed, handle it.
-    });
-  }
-}).catch(err => {
-  // handle err
-});
-const html5QrCodeF = new Html5Qrcode("reader",true);
-html5QrCodeF.clear();
-const fileinput = document.getElementById('qr-input-file');
-fileinput.addEventListener('change', e => {
-
-  if (e.target.files.length == 0) {
-    // No file selected, ignore 
-    return;
-  }
-
-  const imageFile = e.target.files[0];
-  
-  // Scan QR Code
-  html5QrCodeF.scanFile(imageFile, true)
-  .then(qrCodeMessage => {
-    // success, use qrCodeMessage
-    if(qrCodeMessage!="T-ARFur")
-        {
-            document.querySelectorAll('.boxed-text-l')['0'].innerText=`This experience ${qrCodeMessage} doesn't exist in TempusXR or has been removed.`;
-            $('#menu-warning-1').showMenu();
-        }
-        else
-        {
-            document.location='experiences-details.html';
-        }
-  })
-  .catch(err => {
-    // failure, handle it.
-    //console.log(`Error scanning file. Reason: ${err}`),
-    result.innerHTML ='Your file is not a TCode. We are unable to read your code. Please retry';
-    //document.querySelectorAll('.boxed-text-l')['0'].innerText=`Your file is not a TCode`;
-    //`You can scan a TempusCode or upload it by using the button below `;
-  });
-});
-</script>
+<script type="text/javascript" src="scripts/module/qr_scanner.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 
 
