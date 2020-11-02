@@ -27,13 +27,13 @@
     <div class="header header-fixed header-logo-center">
         <a data-vibrate="5" href="home.html" class="header-title">TempusXR</a>
         <a data-vibrate="5" href="#" data-menu="menu-settings" class="header-icon header-icon-1"><i class="fa font-20 fa-bars "></i></a>
-        <a data-vibrate="5" href="qr_scanner.html" data-menu="menu-settings" class="header-icon header-icon-4"><i class="fa fa-qrcode font-20 "></i>
+        <a data-vibrate="5" href="qr_scanner.html" class="header-icon header-icon-4"><i class="fa fa-qrcode font-20 "></i>
         </a>
     </div>
     <div id="footer-bar" class="footer-bar-3 ">
-        <a data-vibrate="5" href="page-instant.html"><i class="fa fa-heart"></i><span>Favoris</span></a>
-        <a data-vibrate="5" href="home.html" class="active-nav"><i class="fa fa-home"></i><span>Home</span></a>
-        <a data-vibrate="5" href="page-profile-1.html"><i class="fa fa-user-alt"></i><span>Account</span></a>
+        <a data-vibrate="5" href="page-instant.html"><i class="fa fa-heart"></i><span tkey="favorite"></span></a>
+        <a data-vibrate="5" href="home.html" class="active-nav"><i class="fa fa-home"></i><span tkey="home">Home</span></a>
+        <a data-vibrate="5" href="page-profile-1.html"><i class="fa fa-user-alt"></i><span tkey="account">Account</span></a>
         <!-- <a href="#" data-menu="menu-settings"><i class="fa fa-cog"></i><span>Settings</span><em class="badge bg-green1-dark">3</em></a> -->
     </div>
       
@@ -54,7 +54,7 @@
         <!--Search -->
         <div class="search-box search-header bg-theme card-style mr-3 ml-3">
             <i class="fa fa-search"></i>
-            <input  type="text" class="border-0" placeholder="Which experience are you looking for?" data-search>
+            <input  name="search_field" type="text" class="border-0" placeholder="Which experience are you looking for?" data-search>
             <a data-vibrate="5"href="#" class="disabled"><i class="fa fa-times-circle color-red2-dark"></i></a>
             <!-- <a href="index.html"><i class="fa fa-qrcode font-20 color-magenta2-dark"></i></a> -->
         </div>
@@ -119,7 +119,7 @@
             <a data-vibrate="5" href="#" >
                 <div class="card rounded-m shadow-l">
                     <div class="card-top">
-                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now <i class="color-white fa fa-camera" ></i></span>
+                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3" tkey="see_now"></span>
                     </div>
                     <div class="card-bottom text-center mb-0">
                         <h1 class="color-white font-700 mb-n1">Power of Augmented Reality</h1>
@@ -132,7 +132,7 @@
             <a data-vibrate="5" href="experiences-details1.html" >
                 <div class="card rounded-m shadow-l">
                     <div class="card-top">
-                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now <i class="color-white fa fa-camera" ></i></span>
+                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3" tkey="see_now"></span>
                     </div>
                     <div class="card-bottom text-center mb-0">
                         <h1 class="color-white font-700 mb-n1">Discover a world</h1>
@@ -145,7 +145,7 @@
             <a data-vibrate="5" href="#" >
                 <div class="card rounded-m shadow-l">
                     <div class="card-top">
-                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now <i class="color-white fa fa-camera" ></i></span>
+                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3" tkey="see_now"></span>
                     </div>
                     <div class="card-bottom text-center mb-0">
                         <h1 class="color-white font-700 mb-n1">Learn & Play</h1>
@@ -158,7 +158,7 @@
             <a data-vibrate="5"data-vibrate="5"href="#" >
                 <div class="card rounded-m shadow-l">
                     <div class="card-top">
-                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See now <i class="color-white fa fa-camera" ></i></span>
+                        <span class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3" tkey="see_now"></span>
                     </div>
                     <div class="card-bottom text-center mb-0">
                         <h1 class="color-white font-700 mb-n1">Product Vizualition</h1>
@@ -175,8 +175,8 @@
         <div class="card card-style">
             <div class="content">
 
-                <h3>Latest Experiences</h3>
-                <p>The 10 latest experiences additions</p>
+                <h3 tkey="latest_exp"></h3>
+                <p tkey="x_latest"></p>
                             
                 <a data-vibrate="5" href="experiences-details.html" class="d-flex pb-4">
                     <div class="align-self-center">
@@ -270,7 +270,7 @@
                 </a>
 
                 <div class="card-top">
-                    <span data-vibrate="5" class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3">See more </span>
+                    <span data-vibrate="5" tkey="see_more" class="btn btn-sm rounded-sm bg-highlight font-800 text-uppercase float-right m-3"></span>
                 </div>
                 
             </div>           
@@ -281,13 +281,13 @@
     <!-- End of Page Content--> 
     <!-- All Menus, Action Sheets, Modals, Notifications, Toasts, Snackbars get Placed outside the <div class="page-content"> -->
     <div id="menu-settings" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="308">
-        <div class="menu-title"><h1>Settings</h1><p class="color-highlight">Flexible and Easy to Use try </p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
+        <div class="menu-title"><h1 tkey="settings"></h1><p class="color-highlight" tkey="settings_desc"></p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
         <div class="divider divider-margins mb-n2"></div>
         <div class="content">
             <div class="list-group list-custom-small">
                 <a data-vibrate="5" href="#" data-toggle-theme data-trigger-switch="switch-dark-mode" class="pb-2 ml-n1">
                     <i class="fa font-12 fa-moon rounded-s bg-highlight color-white mr-3"></i>
-                    <span>Dark Mode</span>
+                    <span tkey="dark"></span>
                     <div class="custom-control scale-switch ios-switch">
                         <input data-toggle-theme-switch type="checkbox" class="ios-input" id="switch-dark-mode">
                         <label class="custom-control-label" for="switch-dark-mode"></label>
@@ -298,7 +298,7 @@
             <div class="list-group list-custom-small">
                 <a data-vibrate="5" href="#" data-trigger-switch="sidebar-31-switch-3"  class="pb-2 ml-n1">
                     <i class="fa font-12 fa-bell rounded-s bg-blue2-dark"></i>
-                    <span>Notifications</span>
+                    <span tkey="notifications"></span>
                     <div class="custom-control scale-switch ios-switch">
                         <input  type="checkbox" class="ios-input" id="sidebar-31-switch-3" checked >
                         <label class="custom-control-label" for="switch-dark-mode"></label>
@@ -309,28 +309,28 @@
             <div class="list-group list-custom-small">
                 <a data-vibrate="5" href="#"class="pb-2 ml-n1">
                     <i class="fa font-12 fa-plus rounded-s bg-orange-dark"></i>
-                    <span>Create your experience</span>
+                    <span tkey="create_exp"></span>
                     <i class="fa fa-angle-right"></i>
                 </a>    
             </div>
             <div class="list-group list-custom-small">
                 <a data-vibrate="5" href="page-contact.html"class="pb-2 ml-n1">
                     <i class="fa font-12 fa-headset rounded-s bg-teal-dark"></i>
-                    <span>Support</span>
+                    <span tkey="support"></span>
                     <i class="fa fa-angle-right"></i>
                 </a>    
             </div>
             <div class="list-group list-custom-small">
                 <a data-vibrate="5" href="#" data-menu="menu-share"  class="pb-2 ml-n1">
                     <i class="fa font-12 fa-share-alt rounded-s bg-red2-dark"></i>
-                    <span>Share the app</span>
+                    <span tkey="share_app"></span>
                     <i class="fa fa-angle-right"></i>
                 </a>    
             </div>
             <div class="list-group list-custom-small">
                 <a data-vibrate="5" href="page-about.html"class="pb-2 ml-n1">
                     <i class="fa font-12 fa-info-circle rounded-s bg-aqua-dark"></i>
-                    <span>About the app</span>
+                    <span tkey="about"></span>
                     <i class="fa fa-angle-right"></i>
                 </a>    
             </div>
@@ -338,7 +338,7 @@
     </div>
     <!-- Menu Share -->
     <div id="menu-share" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="345" data-menu-effect="menu-over">
-        <div class="menu-title mt-n1"><h1>Share the Love</h1><p class="color-highlight">Just Tap the Social Icon. We'll add the Link</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
+        <div class="menu-title mt-n1"><h1 tkey="share_exp">Share the Love</h1><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
         <div class="content mb-0">
             <div class="divider mb-0"></div>
             <div class="list-group list-custom-small list-icon-0">
@@ -370,7 +370,6 @@
             </div>
         </div>
     </div>
-    
     <!-- Be sure this is on your main visiting page, for example, the index.html page-->
     <!-- Install Prompt for Android -->
     <div id="menu-install-pwa-android" class="menu menu-box-bottom menu-box-detached rounded-l"
@@ -378,12 +377,12 @@
         data-menu-effect="menu-parallax">
         <div class="boxed-text-l mt-4">
             <img class="rounded-l mb-3" src="app/icons/icon-128x128.png" alt="img" width="90">
-            <h4 class="mt-3">Install TempusXR on your phone</h4>
-            <p>
+            <h4 class="mt-3"tkey="install_prompt">Install TempusXR on your phone</h4>
+            <p tkey="install_des">
                 Install TempusXR on your home screen, and access it just like a regular app. It really is that simple!
             </p>
-            <a data-vibrate="5" href="#" class="pwa-install btn btn-s rounded-s shadow-l text-uppercase font-900 bg-highlight mb-2">Add to Home Screen</a><br>
-            <a data-vibrate="5" href="#" class="pwa-dismiss close-menu color-gray2-light text-uppercase font-900 opacity-60 font-10">Maybe later</a>
+            <a tkey="add_to_home" data-vibrate="5" href="#" class="pwa-install btn btn-s rounded-s shadow-l text-uppercase font-900 bg-highlight mb-2">Add to Home Screen</a><br>
+            <a tkey="maybe" data-vibrate="5" href="#" class="pwa-dismiss close-menu color-gray2-light text-uppercase font-900 opacity-60 font-10">Maybe later</a>
             <div class="clear"></div>
         </div>
     </div>   
@@ -395,12 +394,12 @@
         data-menu-effect="menu-parallax">
         <div class="boxed-text-xl mt-4">
             <img class="rounded-l mb-3" src="app/icons/icon-128x128.png" alt="img" width="90">
-            <h4 class="mt-3">Install TempusXR on your phone</h4>
-            <p class="mb-0 pb-0">
+            <h4 class="mt-3"tkey="install_prompt">Install TempusXR on your phone</h4>
+            <p class="mb-0 pb-0"tkey="install_des_ios">
                 Install TempusXR on your home screen, and access it just like a regular app.  Open your Safari menu and tap "Add to Home Screen".
             </p>
             <div class="clear"></div>
-            <a data-vibrate="5" href="#" class="pwa-dismiss close-menu color-highlight uppercase ultrabold opacity-80 top-25">Maybe later</a>
+            <a tkey="maybe" data-vibrate="5" href="#" class="pwa-dismiss close-menu color-gray2-light text-uppercase font-900 opacity-60 font-10">Maybe later</a>
             <i class="fa-ios-arrow fa fa-caret-down font-40"></i>
         </div>
     </div>
@@ -408,6 +407,8 @@
 </div>
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/lang.js"></script>
+<script type="text/javascript" src="scripts/module/home.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 
 

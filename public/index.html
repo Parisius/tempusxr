@@ -148,17 +148,17 @@
                 Hello, stranger! Please enter your credentials below.
             </p>
 
-            <div class="input-style has-icon input-style-1 input-required">
+            <div class="input-style has-icon input-style-2 input-required">
                 <i class="input-icon fa fa-user font-11"></i>
                 <span tkey="username">Username</span>
-                <em>(required)</em>
-                <input type="name" placeholder="Username">
+                <em tkey="required"></em>
+                <input name="username" type="name" placeholder="Username">
             </div> 
-            <div class="input-style has-icon input-style-1 input-required">
+            <div class="input-style has-icon input-style-2 input-required">
                 <i class="input-icon fa fa-lock font-11"></i>
                 <span tkey="password">Password</span>
-                <em>(required)</em>
-                <input type="password" placeholder="Password">
+                <em tkey="required"></em>
+                <input name="password" type="password" placeholder="Password">
             </div>   
             <div class="row">
                 <div class="col-6">
@@ -178,27 +178,27 @@
          data-menu-effect="menu-parallax">
         <div class="mr-3 ml-3 mt-4">
             <h1 class="text-uppercase font-900 mb-0"tkey="register1">Register</h1>
-            <p class="font-11  mt-n1 mb-0"tkey="register_txt">
+            <p class="font-11  mt-n1 mb-0" tkey="register_txt">
                 Don't have an account? Register below.
             </p>
 
-            <div class="input-style has-icon input-style-1 input-required">
+            <div class="input-style has-icon input-style-2 input-required">
                 <i class="input-icon fa fa-user font-11"></i>
                 <span tkey="username">Username</span>
-                <em>(required)</em>
-                <input type="name" placeholder="Username">
+                <em tkey="required"></em>
+                <input name="username_r" type="name" placeholder="Username">
             </div> 
-            <div class="input-style has-icon input-style-1 input-required">
+            <div class="input-style has-icon input-style-2 input-required">
                 <i class="input-icon fa fa-at"></i>
                 <span tkey="email">Email</span>
-                <em>(required)</em>
-                <input type="email" placeholder="Email">
+                <em tkey="required"></em>
+                <input name="email" type="email" placeholder="Email">
             </div>         
-            <div class="input-style has-icon input-style-1 input-required">
+            <div class="input-style has-icon input-style-2 input-required">
                 <i class="input-icon fa fa-lock font-11"></i>
                 <span tkey="password">Password</span>
-                <em>(required)</em>
-                <input type="password" placeholder="Choose a Password">
+                <em tkey="required"></em>
+                <input name="password_r" type="password" placeholder="Choose a Password">
             </div>        
             <p class="text-center pb-0 mb-n1 pt-1">
                 <a data-vibrate="5" href="#" data-menu="menu-signin" class="text-center font-11 color-gray2-dark"tkey="already_register">Already Registered? Sign In Here.</a>
@@ -215,11 +215,11 @@
             <p class="font-11 mb-3"tkey="forgot_txt">
                 Let's get you back into your account. Enter your email to reset.
             </p>
-            <div class="input-style has-icon input-style-1 input-required mb-4">
+            <div class="input-style has-icon input-style-2 input-required mb-4">
                 <i class="input-icon fa fa-at"></i>
                 <span tkey="email">Email</span>
-                <em>(required)</em>
-                <input type="email" placeholder="Email">
+                <em tkey="required"></em>
+                <input name="email_f" type="email" placeholder="Email">
             </div>   
             <a data-vibrate="5" href="#" class="btn btn-full btn-m shadow-l rounded-s bg-highlight text-uppercase font-900 top-20 mt-4"tkey="forgot_btn">SEND RECOVERY EMAIL</a>
         </div>
@@ -265,8 +265,7 @@
 </div>
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-
 <script type="text/javascript" src="scripts/lang.js"></script>
-<!-- <script type="text/javascript" src="scripts/lingumania.min.js"></script> -->
+<script type="text/javascript" src="scripts/module/index.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 </body>

@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#6E2EDD">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
 <title>TempusXR</title>
@@ -11,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
 <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+<link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
 </head>
     
@@ -20,16 +22,16 @@
     
 <div id="page">
     
-    <div class="header header-fixed header-auto-show header-logo-center">
+    <div class="header header-fixed  header-logo-center">
         <a href="home.html" class="header-title">TempusXR</a>
-        <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
-        <a href="#" data-menu="menu-settings" class="header-icon header-icon-4"><i class="fa font-20 fa-bars"></i></a>
+        <a href="home.html" data-back-button class="header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
+        <a href="#" data-menu="menu-settings" class="header-icon header-icon-4"><i class="fa fa-bars"></i></a>
     </div>
     
     <div id="footer-bar" class="footer-bar-3 ">
-        <a href="page-instant.html" ><i class="fa fa-heart"></i><span>Favorites</span></a>
-        <a href="home.html" class="active-nav" ><i class="fa fa-home"></i><span>Home</span></a>
-        <a href="page-profile-1.html"><i class="fa fa-user-alt"></i><span>Account</span></a>
+        <a data-vibrate="5" href="page-instant.html"><i class="fa fa-heart"></i><span tkey="favorite"></span></a>
+        <a data-vibrate="5" href="home.html" class="active-nav"><i class="fa fa-home"></i><span tkey="home">Home</span></a>
+        <a data-vibrate="5" href="page-profile-1.html"><i class="fa fa-user-alt"></i><span tkey="account">Account</span></a>
         <!-- <a href="#" data-menu="menu-settings"><i class="fa fa-cog"></i><span>Settings</span><em class="badge bg-green1-dark">3</em></a> -->
     </div>
 
@@ -37,45 +39,45 @@
         
         <div class="card card-style preload-img" data-src="images/pictures/8w.jpg" data-card-height="130">
             <div class="card-center ml-3">
-                <h1 class="color-white mb-0">Get in Touch</h1>
-                <p class="color-white mt-n1 mb-0">We're always here for you!</p>
+                <h1 class="color-white mb-0" tkey="get_in_touch"></h1>
+                <p class="color-white mt-n1 mb-0" tkey="get_in_touch_desc">We're always here for you!</p>
             </div>
             <div class="card-center mr-3">
-                <a href="#" data-back-button class="btn btn-m float-right rounded-xl shadow-xl text-uppercase font-800 bg-highlight">Back Home</a>
+                <a href="#" data-back-button class="btn btn-m float-right rounded-xl shadow-xl text-uppercase font-800 bg-highlight" tkey="back_home"></a>
             </div>
             <div class="card-overlay bg-black opacity-80"></div>
         </div>       
 
         <div class="formValidationError bg-red2-dark content rounded-sm shadow-xl" id="contactNameFieldError">
-            <p class="text-center text-uppercase p-2 color-white font-900 ">Name is required!</p>
+            <p class="text-center text-uppercase p-2 color-white font-900"tkey="error_name">Name is required!</p>
         </div>
         <div class="formValidationError bg-red2-dark content rounded-sm shadow-xl" id="contactEmailFieldError">
-            <p class="text-center text-uppercase p-2 color-white font-900">Mail address required!</p>
+            <p class="text-center text-uppercase p-2 color-white font-900" tkey="error_required_email">Mail address required!</p>
         </div>
         <div class="formValidationError bg-red2-dark content rounded-sm shadow-xl" id="contactEmailFieldError2">
-            <p class="text-center text-uppercase p-2 color-white font-900">Mail address must be valid!</p>
+            <p class="text-center text-uppercase p-2 color-white font-900"tkey="error_valid_email">Mail address must be valid!</p>
         </div>
         <div class="formValidationError bg-red2-dark content rounded-sm shadow-xl" id="contactMessageTextareaError">
-            <p class="text-center text-uppercase p-2 color-white font-900">Message field is empty!</p>
+            <p class="text-center text-uppercase p-2 color-white font-900"tkey="error_message_field">Message field is empty!</p>
         </div>
 
         <div class="formSuccessMessageWrap card card-style">
             <div class="shadow-l rounded-m bg-gradient-green1 mr-n1 ml-n1 mb-n1 ">
                 <h1 class="color-white text-center pt-4"><i class="fa fa-check-circle fa-3x shadow-s scale-box rounded-circle"></i></h1>
-                <h2 class="color-white bold text-center pt-3">Message Sent</h2>
-                <p class="color-white pb-4 text-center mt-n2 mb-0">We'll get back to you shortly.</p>
+                <h2 class="color-white bold text-center pt-3"tkey="message_sent">Message Sent</h2>
+                <p class="color-white pb-4 text-center mt-n2 mb-0"tkey="message_sent_desc">We'll get back to you shortly.</p>
             </div>
         </div>
         
         <div class="formSuccessMessageWrap card card-style">
             <div class="content text-center">
-                <h2>Meanwhile, let's get social!</h2>
-                <p class="boxed-text-xl">
+                <h2 tkey="get_social">Meanwhile, let's get social!</h2>
+                <p tkey="get_social_desc"class="boxed-text-xl">
                     Here are our social media platforms! Follow us for the latest updates or just say hello! 
                 </p>
-                <a href="#" class="icon icon-xl shadow-xl rounded-xl bg-facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="icon icon-xl shadow-xl rounded-xl bg-instagram ml-3 mr-3"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="icon icon-xl shadow-xl rounded-xl bg-twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://web.facebook.com/irllab" class="icon icon-xl shadow-xl rounded-xl bg-facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/irllab/" class="icon icon-xl shadow-xl rounded-xl bg-instagram ml-3 mr-3"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/irllabxr" class="icon icon-xl shadow-xl rounded-xl bg-twitter"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
         
@@ -84,15 +86,19 @@
                 <form action="php/contact.php" method="post" class="contactForm" id="contactForm">
                     <fieldset>
                         <div class="form-field form-name">
-                            <label class="contactNameField color-theme" for="contactNameField">Name:<span>(required)</span></label>
+                            <label class="contactNameField color-theme" for="contactNameField" tkey="name"></label>
                             <input type="text" name="contactNameField" value="" class="contactField round-small requiredField" id="contactNameField" />
                         </div>
+                        <div class="form-field form-name">
+                            <label class="contactNameField color-theme" for="contactNameField" tkey="phone"></label>
+                            <input type="phone" name="contactPhoneField" value="" class="contactField round-small" id="contactPhoneField" placeholder="+XXX XXXXXXXX" />
+                        </div>
                         <div class="form-field form-email">
-                            <label class="contactEmailField color-theme" for="contactEmailField">Email:<span>(required)</span></label>
+                            <label class="contactEmailField color-theme" for="contactEmailField" tkey="email"></label>
                             <input type="text" name="contactEmailField" value="" class="contactField round-small requiredField requiredEmailField" id="contactEmailField" />
                         </div>
                         <div class="form-field form-text">
-                            <label class="contactMessageTextarea color-theme" for="contactMessageTextarea">Message:<span>(required)</span></label>
+                            <label class="contactMessageTextarea color-theme" for="contactMessageTextarea">Message<span tkey="required"></span></label>
                             <textarea name="contactMessageTextarea" class="contactTextarea round-small requiredField" id="contactMessageTextarea"></textarea>
                         </div>
                         <div class="form-button">
@@ -106,100 +112,100 @@
     </div>
     <!-- End of Page Content--> 
     <!-- All Menus, Action Sheets, Modals, Notifications, Toasts, Snackbars get Placed outside the <div class="page-content"> -->
-    <div id="menu-settings" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="308">
-        <div class="menu-title"><h1>Settings</h1><p class="color-highlight">Flexible and Easy to Use</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
-        <div class="divider divider-margins mb-n2"></div>
-        <div class="content">
-            <div class="list-group list-custom-small">
-                <a href="#" data-toggle-theme data-trigger-switch="switch-dark-mode" class="pb-2 ml-n1">
-                    <i class="fa font-12 fa-moon rounded-s bg-highlight color-white mr-3"></i>
-                    <span>Dark Mode</span>
-                    <div class="custom-control scale-switch ios-switch">
-                        <input data-toggle-theme-switch type="checkbox" class="ios-input" id="switch-dark-mode">
-                        <label class="custom-control-label" for="switch-dark-mode"></label>
-                    </div>
-                    <i class="fa fa-angle-right"></i>
-                </a>    
-            </div>
-            <div class="list-group list-custom-small">
-                <a href="#" data-trigger-switch="sidebar-31-switch-3"  class="pb-2 ml-n1">
-                    <i class="fa font-12 fa-bell rounded-s bg-blue2-dark"></i>
-                    <span>Notifications</span>
-                    <div class="custom-control scale-switch ios-switch">
-                        <input  type="checkbox" class="ios-input" id="sidebar-31-switch-3" checked >
-                        <label class="custom-control-label" for="switch-dark-mode"></label>
-                    </div>
-                    <i class="fa fa-angle-right"></i>
-                </a>    
-            </div>
-            <div class="list-group list-custom-small">
-                <a href="#"class="pb-2 ml-n1">
-                    <i class="fa font-12 fa-plus rounded-s bg-orange-dark"></i>
-                    <span>Create your experience</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>    
-            </div>
-            <div class="list-group list-custom-small">
-                <a href="page-contact.html"class="pb-2 ml-n1">
-                    <i class="fa font-12 fa-headset rounded-s bg-teal-dark"></i>
-                    <span>Support</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>    
-            </div>
-            <div class="list-group list-custom-small">
-                <a href="#" data-menu="menu-share"  class="pb-2 ml-n1">
-                    <i class="fa font-12 fa-share-alt rounded-s bg-red2-dark"></i>
-                    <span>Share the app</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>    
-            </div>
-            <div class="list-group list-custom-small">
-                <a href="page-about.html"class="pb-2 ml-n1">
-                    <i class="fa font-12 fa-info-circle rounded-s bg-aqua-dark"></i>
-                    <span>About the app</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>    
-            </div>
-        </div>
-    </div>
-    <!-- Menu Settings Highlights-->
-    <!-- Menu Share -->
-    <div id="menu-share" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="345" data-menu-effect="menu-over">
-        <div class="menu-title mt-n1"><h1>Share the Love</h1><p class="color-highlight">Just Tap the Social Icon. We'll add the Link</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
-        <div class="content mb-0">
-            <div class="divider mb-0"></div>
-            <div class="list-group list-custom-small list-icon-0">
-                <a href="#" class="shareToFacebook">
-                    <i class="font-18 fab fa-facebook color-facebook"></i>
-                    <span class="font-13">Facebook</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                <a href="#" class="shareToTwitter">
-                    <i class="font-18 fab fa-twitter-square color-twitter"></i>
-                    <span class="font-13">Twitter</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                <a href="#" class="shareToLinkedIn">
-                    <i class="font-18 fab fa-linkedin color-linkedin"></i>
-                    <span class="font-13">LinkedIn</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>        
-                <a href="#" class="shareToWhatsApp">
-                    <i class="font-18 fab fa-whatsapp-square color-whatsapp"></i>
-                    <span class="font-13">WhatsApp</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>   
-                <a href="#" class="shareToMail border-0">
-                    <i class="font-18 fa fa-envelope-square color-mail"></i>
-                    <span class="font-13">Email</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
+        <div id="menu-settings" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="308">
+            <div class="menu-title"><h1 tkey="settings"></h1><p class="color-highlight" tkey="settings_desc"></p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
+            <div class="divider divider-margins mb-n2"></div>
+            <div class="content">
+                <div class="list-group list-custom-small">
+                    <a data-vibrate="5" href="#" data-toggle-theme data-trigger-switch="switch-dark-mode" class="pb-2 ml-n1">
+                        <i class="fa font-12 fa-moon rounded-s bg-highlight color-white mr-3"></i>
+                        <span tkey="dark"></span>
+                        <div class="custom-control scale-switch ios-switch">
+                            <input data-toggle-theme-switch type="checkbox" class="ios-input" id="switch-dark-mode">
+                            <label class="custom-control-label" for="switch-dark-mode"></label>
+                        </div>
+                        <i class="fa fa-angle-right"></i>
+                    </a>    
+                </div>
+                <div class="list-group list-custom-small">
+                    <a data-vibrate="5" href="#" data-trigger-switch="sidebar-31-switch-3"  class="pb-2 ml-n1">
+                        <i class="fa font-12 fa-bell rounded-s bg-blue2-dark"></i>
+                        <span tkey="notifications"></span>
+                        <div class="custom-control scale-switch ios-switch">
+                            <input  type="checkbox" class="ios-input" id="sidebar-31-switch-3" checked >
+                            <label class="custom-control-label" for="switch-dark-mode"></label>
+                        </div>
+                        <i class="fa fa-angle-right"></i>
+                    </a>    
+                </div>
+                <div class="list-group list-custom-small">
+                    <a data-vibrate="5" href="#"class="pb-2 ml-n1">
+                        <i class="fa font-12 fa-plus rounded-s bg-orange-dark"></i>
+                        <span tkey="create_exp"></span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>    
+                </div>
+                <div class="list-group list-custom-small">
+                    <a data-vibrate="5" href="page-contact.html"class="pb-2 ml-n1">
+                        <i class="fa font-12 fa-headset rounded-s bg-teal-dark"></i>
+                        <span tkey="support"></span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>    
+                </div>
+                <div class="list-group list-custom-small">
+                    <a data-vibrate="5" href="#" data-menu="menu-share"  class="pb-2 ml-n1">
+                        <i class="fa font-12 fa-share-alt rounded-s bg-red2-dark"></i>
+                        <span tkey="share_app"></span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>    
+                </div>
+                <div class="list-group list-custom-small">
+                    <a data-vibrate="5" href="page-about.html"class="pb-2 ml-n1">
+                        <i class="fa font-12 fa-info-circle rounded-s bg-aqua-dark"></i>
+                        <span tkey="about"></span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>    
+                </div>
             </div>
         </div>
-    </div>
+        <!-- Menu Share -->
+        <div id="menu-share" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="345" data-menu-effect="menu-over">
+            <div class="menu-title mt-n1"><h1 tkey="share_exp">Share the Love</h1><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
+            <div class="content mb-0">
+                <div class="divider mb-0"></div>
+                <div class="list-group list-custom-small list-icon-0">
+                    <a data-vibrate="5" href="#" class="shareToFacebook">
+                        <i class="font-18 fab fa-facebook color-facebook"></i>
+                        <span class="font-13">Facebook</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    <a data-vibrate="5" href="#" class="shareToTwitter">
+                        <i class="font-18 fab fa-twitter-square color-twitter"></i>
+                        <span class="font-13">Twitter</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    <a data-vibrate="5" href="#" class="shareToLinkedIn">
+                        <i class="font-18 fab fa-linkedin color-linkedin"></i>
+                        <span class="font-13">LinkedIn</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>        
+                    <a data-vibrate="5" href="#" class="shareToWhatsApp">
+                        <i class="font-18 fab fa-whatsapp-square color-whatsapp"></i>
+                        <span class="font-13">WhatsApp</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>   
+                    <a data-vibrate="5" href="#" class="shareToMail border-0">
+                        <i class="font-18 fa fa-envelope-square color-mail"></i>
+                        <span class="font-13">Email</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
  
 </div>
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/lang.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 </body>
