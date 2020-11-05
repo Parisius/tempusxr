@@ -33,8 +33,8 @@ result = document.querySelector("#qr-reader-results");
         }
         else
         {
-            document.location='https://8thwall.8thwall.app/curved-slam/';
-            //window.location='https://google.com';
+            //document.location='exp';
+            window.location='experiences-details.html';
         }
         html5QrCode.stop().then(ignore => {
         // QR Code scanning is stopped.
