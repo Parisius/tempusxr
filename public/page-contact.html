@@ -91,7 +91,7 @@
                         </div>
                         <div class="form-field form-name">
                             <label class="contactNameField color-theme" for="contactNameField" tkey="phone"></label>
-                            <input type="phone" name="contactPhoneField" value="" class="contactField round-small" id="contactPhoneField" placeholder="+XXX XXXXXXXX" />
+                            <input type="number"maxlength="12" type="phone" name="contactPhoneField" value="" class="contactField round-small" id="contactPhoneField" placeholder="+XXX XXXXXXXX" />
                         </div>
                         <div class="form-field form-email">
                             <label class="contactEmailField color-theme" for="contactEmailField" tkey="email"></label>
@@ -207,5 +207,15 @@
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/lang.js"></script>
+<script> 
+    function onlyNumberKey(evt) { 
+          
+        // Only ASCII charactar in that range allowed 
+        var ASCIICode = (evt.which) ? evt.which : evt.keyCode 
+        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) 
+            return false; 
+        return true; 
+    } 
+</script> 
 <script type="text/javascript" src="scripts/custom.js"></script>
 </body>
